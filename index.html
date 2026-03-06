@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="robots" content="noindex, follow">
+    <title>Explore the Silver Horn Book of Drawings</title>
+    <!-- Other head elements like CSS links, etc. -->
+     <!-- Google tag (gtag.js) https://nelson-atkins.org -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9T0PZBCP7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D9T0PZBCP7');
+    </script>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xyu4lmf.css">
+    <script src="https://use.fontawesome.com/69e6e0bdba.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="node_modules\page-flip\dist\js\page-flip.browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+    <!-- <script src="https://hammerjs.github.io/dist/hammer.js"></script> -->
+    <script src="./book.js" defer></script>
+    <script src="./hammer.js" defer></script>
+    <script src="./modal.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <img  
+            src="Img\Page 1_Sternfeld.jpg" 
+            alt="A black and white photograph of a light-skinned, young man taking a photograph outside. He reaches toward and looks at a large-format camera on a tripod."
+            height="20em">
+        </img> 
+        <div class="white">
+            <p> 
+            Joel Sternfeld​
+            </p>
+            <p>
+            American, born 1944​
+            </p>
+            <p>
+            Exhausted Renegade Elephant, Woodland, Washington, June 1979​
+            </p>
+            <p>
+            Dye transfer print (printed 1982)​
+            </p>
+            <p>
+            Gift of Peggy and William Lyons, 2022.25.11
+            </p>
+        </div>
+       
+    </div>
+
+    <div class="row">
+
+   
+        <!-- Previous Button -->
+        <button type="button" class="btn-prev" id="prev-btn" >
+            <i class="fas fa-chevron-left"></i>
+            <p>Previous</p>
+        </button>  
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">
+            &times;
+            </span>
+            
+            <div class="zoom">
+                <button class="zoom-btn" id="zoomIn" onclick="zoomIn()">Zoom In</button>
+                <button class="zoom-btn" id="zoomOut" onclick="zoomOut()">Zoom Out</button>
+            </div>
+            
+            <!-- Modal Content (The Image) -->
+            <div class="pinch-zoom-container" >
+                <img id="pinch-zoom-image-id" class="pinch-zoom-image">
+            </div>
+        
+            <!-- Modal Caption (Image Text) -->
+            <!-- <div id="mod-caption" ></div> -->
+        </div>
+
+        <!-- turnpage book  -->   
+        <div class="container">
+            <div class="flip-book" id="Book">
+
+                <div class="page page-bkg" >
+                    <div class="page-content book-desc">
+             
+                            <p>What's the story beyond the frame?</p>
+                    </div>
+                </div>
+        <!-- Page 1 -->
+                <div class="page page-bkg_red" >
+                    <div class="page-content">
+                        <img  
+                            src="Img\Page 1_Sternfeld.jpg" 
+                            alt="A black and white photograph of a light-skinned, young man taking a photograph outside. He reaches toward and looks at a large-format camera on a tripod."
+                            width="100%">
+                        </img> 
+                        <figure class="quote white">
+                            <blockquote>
+                                <q>
+                                You take 35 degrees out of 360 degrees and call it a photo. No individual photo explains anything.
+                                </q>
+                            </blockquote>
+                                <figcaption class="lt-red">
+                                    &mdash; Joel Sternfeld
+                                </figcaption>
+                        </figure>
+                        <hr>
+                        <p class="white">
+                            Flip through this book to discover the story beyond the frame.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- PAGES .... -->
+        <!-- Page 2 -->
+                <div class="page page-bkg" >
+                    <div class="page-content">
+                    <ol  >
+                            <li >
+                                <h3 class="red">
+                                    Let your eyes wander over the
+                                    photograph above on the wall.
+                                </h3>
+                                <p>
+                                    What story might this photograph be telling?
+                                    What do you see that supports that story?
+                                </p>
+                                <h3 class="red">
+                                    Look again.
+                                </h3>
+                                <p>
+                                    What more can you find that confirms
+                                    or challenges your ideas?
+                                </p>
+                            </li>
+                            <li>
+                                <h3 class="red">
+                                    Read the label on the wall
+                                    next to the photograph.
+                                </h3>
+                                <p>
+                                    How might the label inform
+                                    the story you see? 
+                                </p>
+                            </li>
+                    </ol>
+                    </div>
+                </div>
+        <!-- Page 3 -->
+                <div class="page page-bkg">
+                    <div class="page-content">
+                        <figure class="quote green">
+                            <blockquote>
+                                <q>
+                                You take 35 degrees out of 360 degrees and call it a photo. No individual photo explains anything.
+                                </q>
+                            </blockquote>
+                                <p class="black">
+                                    Joel Sternfeld’s photograph represents one moment of a larger story.
+                                </p>
+                        </figure>
+                        <h3 class="white">
+                            Turn the page to discover more.
+                        </h3>
+                    
+                    </div>
+                </div>
+        <!-- Page 4 -->
+                <div class="page page-bkg_red-gray">
+                    <div class="page-content">
+                        <h3 class="white">
+                            How might these headlines change your ideas about the photograph?
+                        </h3>
+                        <img  
+                            src="Img\Page 4_Woodland trainer found dead next to elephant.png" 
+                            alt="
+    A grainy, black and white newspaper clipping of two men, at right, kneeling beside a chained, prone elephant, at left. At bottom in large, typed text reads “Woodland trainer found dead next to elephant.” Just above, in smaller text, reads “The drama of Morgan Berry’s death ended today as his son Kenneth, and game agent Jack Barker kneel by a tranquilized elephant near Morgan’s wild animal farm outside Woodland.” 
+                            ">
+                        </img> 
+                        <img  
+                            src="Img\Page 4_The_Roswell_Daily_Record.jpg" 
+                            alt="
+                            A black and white newspaper masthead and headline. The masthead reads, “The Daily Sentinel.” Below reads the headline, “Elephant goes on rampage: Famed Trainer Trampled.”  
+                            ">
+                        </img> 
+
+
+                    </div>
+                </div>
+        <!-- Page 5 -->
+                <div class="page page-bkg_red-gray">
+                    <div class="page-content">
+                        <img  
+                            src="Img\Page 5_Daily_Sitka_Sentinel.jpg" 
+                            alt="
+                        A black and white newspaper masthead and headline. The masthead reads “Roswell Daily Record”, and the headline reads, “Elephant goes crazy and kills its trainer.”  
+                            ">
+                        </img> 
+                        <img  
+                            src="Img\Page 5_A lot of bull.png" 
+                            alt="
+    A grainy, black and white newspaper clipping with a photograph of a person kneeling in the grass beside a chained, prone elephant. At bottom, the headline text reads “A Lot of Bull.” At top, text reads “Daily American Republic, Thursday, June 28, 1979, Poplar Bluff, Mo., Page 8.” 
+                            ">
+                        </img> 
+                    
+
+
+                    </div>
+                </div>
+        <!-- Page 6 -->
+                <div class="page page-bkg_red">
+                    <div class="page-content">
+                        <img  
+                            src="Img\Page 6_The_Ottawa_Journal masthead.jpg" 
+                            alt="
+                        A black and white newspaper masthead that reads, “Ottawa Journal.” Below, in smaller type, “Thursday, June 28, 1979.”    
+                            ">
+                        </img> 
+                        <img  
+                            src="Img\Page 6_Elephant trainer dies on the job.jpg" 
+                            alt="
+    A black and white newspaper clipping with a photograph of five people surrounding an elephant in tall grass. At bottom the image caption reads, “Elephant herded to confinement.” Below the image caption, the headline reads, “Elephant trainer dies on the job.” 
+                            ">
+                        </img> 
+                        
+
+
+                    </div>
+                </div>
+        <!-- Page 7 -->
+                <div class="page page-bkg">
+                    <div class="page-content">
+                        <h3 class="red">
+                            How might this article change your ideas about the photograph?
+                        </h3>
+                        <figure class="quote page-bkg_gray">
+                            <blockquote>
+                                <h1>
+                            Elephant trainer dies on the job
+                                </h1>
+                                <p>
+    Woodland, Washington (AP)—The trampled body of renowned 
+    elephant trainer Morgan Berry was pulled away from a bull 
+    elephant [named Buddha] Wednesday...
+                                </p>
+                                <p>
+    Gary Waddell, chief criminal deputy for the Cowlitz County 
+    sheriff’s office, said the 68-year-old Berry, who had a history of 
+    heart trouble, may have had a heart attack while working with the 
+    elephant...
+                                </p>
+                                <p>
+    A second bull elephant, <strong>Thai</strong>, which had escaped through the 
+    farm’s chain link fence, was shot with a tranquilizer gun about two 
+    kilometres from the farm.
+                                </p>
+                                <div class="page-bkg_green">
+                                    <h3 class="white">
+                                        Thai is the <q>renegade elephant</q> in Sternfeld’s photograph.
+                                    </h3>
+
+                                </div>
+                            </blockquote>
+                                <h4 class="black">
+                                    Excerpt from The Ottawa Journal | June 28, 1979
+                                </h4>
+                        </figure>
+
+                    </div>
+                </div>
+        <!-- Page 8 -->
+                <div class="page page-bkg">
+                    <div class="page-content">
+                        <h3 class="red">
+                        What might Sternfeld’s story reveal about his perspective? 
+                        </h3>
+                        <img  
+                            src="Img\Page 8_@sternfeldarchive image.jpg" 
+                            alt="
+    A screenshot of an Instagram post by @sternfeldarchive. At bottom, the caption reads, “Exhausted Renegade Elephant, Woodland, Washington, June 1979.” The post is a landscape photograph of an elephant collapsed in the middle of a road in the woods.  
+                            ">
+                        </img> 
+                        
+
+
+
+                    </div>
+                </div>
+        <!-- Page 9 -->
+                <div class="page page-bkg">
+                    <div class="page-content">
+                    <figure class="quote ">
+                            <blockquote>
+                                <p><q>
+                                As I headed north on Interstate 5 I turned on the radio, my principal 
+                                source of news: an elephant had escaped from a training farm in the 
+                                hills west of Mt. Helens and had gone on a rampage. My first impulse 
+                                was to not go but it was right on my route and I couldn’t resist so I 
+                                dutifully pulled off the highway. 
+                                </p>
+                                <p>
+                                With the radio’s instructions it was fairly easy to find the road on 
+                                which the now captured elephant was being led back. His trainer, 
+                                Morgan Berry, had died the previous evening, most likely of a heart 
+                                attack. Thai was reluctant to follow anybody but Mr. Berry and so a 
+                                female elephant was brought in to lure him back—to little avail. 
+                                </p>
+                                <p class="green">
+                                . . . 
+                                </p>
+                                <p>
+
+                                Then Thai, hot, traumatized, tranquilized and exhausted collapsed in 
+                                the road. A boy got out a bucket of water and tossed it. As he did so 
+                                I photographed again. 
+                                </p>
+                                <p>
+                                What happened next I can only describe: the elephant and all the 
+                                handlers who had been up all night, went to sleep in the road. Only 
+                                the sheriff and I were awake, but I was out of film.”
+                                </q></p>
+                            </blockquote>
+                                <figcaption class="red">
+                                    <strong>&mdash; Joel Sternfeld</strong>
+                                    <p>
+                                        Posted on January 27, 2025
+                                    </p>
+                                </figcaption>
+                        </figure>
+                    
+
+
+
+
+                    </div>
+                </div>
+        <!-- Page 10 -->
+                <div class="page page-bkg">
+                    <div class="page-content">
+                        <div class="page-bkg_green">
+                            <h1 class="white">
+                                What’s still missing from the story?
+                            </h1>
+                        </div>
+                        <p>
+                            Think about what photographers choose to show you.
+                        </p>
+                        <p>
+                            Photographs show one moment of a larger story: 35 degrees out of a 360-degree view.
+                        </p>
+                    </div>
+                </div>
+        <!-- Page 11 -->
+                <div class="page page-bkg">
+                    <div class="page-content">
+                        <h3 class="red">
+                            Continue the curiosity! Think about what you see as you explore these galleries.
+                        </h3>
+                        <p>
+                            What story might this photograph be telling?
+                        </p>
+                        <p>
+                        What do you see that supports that story?  
+                        </p>
+                        <p>
+                            What more can you find that confirms or challenges your ideas?
+                        </p>
+                        <div class="page-bkg_red">
+                            <p class="white">
+                                Close the book to finish Thai’s story.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+        <!-- Page 12 -->
+                <div class="page page-bkg_red-white">
+                    <div class="page-content">
+                        <div class="white">
+                            <h1 >
+    BREAKING NEWS! 
+                            </h1>
+                            <h2>
+                                Thai is alive and thriving at Houston Zoo
+                            </h2>
+                        </div>
+                        <p>
+                        After Thai’s escape from Morgan Berry’s farm, he was relocated to the Houston Zoo in 1980. In 2025, he celebrated his 60th birthday, making him the second oldest male Asian elephant in North America.
+                        </p>
+                        <div>
+                            <figure>
+                                <img  
+                            src="Img\Page 12_Thai-Historical-Photo-1980_LEFT.jpg" 
+                            alt="
+    A black and white photograph of an adult male Asian elephant, at left, with a dark-haired woman, at right, outside. The elephant reaches his trunk toward the woman over the fence. 
+                            ">
+                        </img> 
+
+                                <figcaption>
+                                    LEFT: Thai with a zookeeper in 1980 when he arrived in Houston. Photo courtesy of Houston Zoo
+    </figcaption>
+                            </figure>
+                            <figure>
+                                <img  
+                            src="Img\Page 12_Thai-Joy-Photo-2017_RIGHT.jpg" 
+                            alt="
+    A color photograph of a large, adult male Asian elephant and baby elephant in an enclosure. The baby elephant stands underneath the adult elephant. 
+                            ">
+                        </img> 
+                            
+
+                                <figcaption>
+                                    RIGHT: Thai pictured in 2017. Photo courtesy of Houston Zoo.
+                                </figcaption>
+                            </figure>
+                    
+                        </div>
+                    </div>
+                </div>
+            <!-- Back Page -->
+                <div class="page page-bkg_gray page-cover page-cover-bottom" data-density="hard">
+                    <div class="page-content">
+                        <button class="white"  id="close-btn" >
+                            Flip back to the beginning
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Next Button -->
+        <button type="button" class="btn-next" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+            <p>Next</p>
+        </button>
+    </div>
+   
+
+    <div class="home-btn">
+        <button id="home-btn" >
+            <i class="fas fa-book"></i>
+            <br>
+            <p>Close Book</p>
+            <p>[<span class="page-current">1</span> of <span class="page-total">-</span>]</p>
+        </button>
+        <div style="display: none; visibility: hidden;">
+            State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+        </div>
+    </div> 
+
+</body>
+</html>

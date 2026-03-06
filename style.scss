@@ -1,0 +1,248 @@
+/* 
+Variables 
+*/
+$bkgd-red       : #701515;
+$bkgd-white     : #FFFFFF;
+$bkgd-gray      : #CFD8DA;
+$bkgd-green      :#226C6F;
+
+$text-white     : #FFFFFF;
+$text-lt-red    : #8B4040;
+$text-red       : #701515;
+$text-blk       : #231F20;
+$text-green     : #226C6F;
+
+$hr             : #833434;
+$green-bar      : #ADC5C7;
+
+$primary-font   : 'Avenir', ff-scala-sans-pro, sans-serif;
+$primary-font-size: clamp(.75rem, .75rem + ((1vw - 0.2rem) * 1.667), 1rem); 
+
+
+// text colors
+.black {
+    color: $text-blk;
+}
+.white {
+        color: $text-white;
+}
+.lt-red {
+        color: $text-lt-red;
+}
+.red {
+        color: $text-red;
+}
+.green {
+        color: $text-green;
+}
+
+:root{
+    font-size: $primary-font-size;
+    font-family: $primary-font;
+}
+
+*{
+    margin: auto;
+    padding:auto;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $primary-font #FFFFFF;
+    background: radial-gradient(closest-side,#000000, #000000,  #2c2c2c);
+    overflow: hidden; /*hides scrollbars*/
+}
+
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+    height: 10vh;
+    font-family: $primary-font;
+    margin: 3rem;
+}
+       
+.home-btn {
+    color: $text-white;
+    text-align: right;
+    position: fixed;
+    font-family: $primary-font;
+    bottom: 10px;
+    width: 100%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+        
+    
+/* Book */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+
+}
+
+.container{
+    width: 90%;
+    margin: auto; /* Center the DIV horizontally */
+}
+
+.page {
+    padding: 2em;
+
+
+
+    .book-desc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    img{
+        object-fit: contain;
+    }
+    blockquote {
+        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 1.5rem) ;
+        font-style: italic;
+        font-weight: 500;
+
+    }
+    figcaption {
+        text-transform: uppercase;
+        
+    }
+    hr {
+        border:1px solid $hr;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+ol {
+    li {
+
+    }
+}
+
+    &-bkg{
+        background-color: $bkgd-white;
+
+        &_red{
+            background-color: $bkgd-red;
+        }
+        &_gray{
+            background-color: $bkgd-gray;
+        }
+        &_green{
+            background-color: $bkgd-green;
+        }
+        &_red-gray{
+            background: linear-gradient(to bottom, $bkgd-red 0%, $bkgd-red 30%, $bkgd-gray 30%, $bkgd-gray 100%);
+        }
+            &_red-white{
+            background: linear-gradient(to bottom, $bkgd-red 0%, $bkgd-red 30%, $bkgd-white 30%, $bkgd-white 100%);
+        }
+    }       
+
+        &.--left { // for left page (property will be added automatically)
+    border-right: 0;
+    box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+    }
+
+    &.--right { // for right page (property will be added automatically)
+        border-left: 0;
+        box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+
+        
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $text-white;
+    font-family: 'Avenir',  ff-scala-sans-pro, sans-serif;
+}
+
+i {
+    padding-bottom: 5px;
+    font-size: 50px;
+    color: $text-white;
+}
+
+/*  
+*  Modal Content 
+*/
+
+/* Trigger Opening the Modal */
+.hidden {
+    visibility: hidden;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    /* background-color: rgba(0,0,0,0.9); Black w/ opacity */
+    overflow: hidden;
+}
+
+/* Modal Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #e5d1b9;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/*Modal Zoom in btn*/
+.zoom {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    color: #e5d1b9;
+    transition: 0.3s;
+    padding: 30;
+}
+.zoom-btn {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+/* Modal content Image */
+
+.pinch-zoom-container {
+    overflow: hidden;
+    height: 90%;
+    width: 70%;
+    touch-action: none !important;
+}
+
+.pinch-zoom-image {
+    width: 100%;
+    touch-action: none !important;
+}

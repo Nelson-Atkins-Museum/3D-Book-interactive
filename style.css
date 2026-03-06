@@ -1,0 +1,212 @@
+/* 
+Variables 
+*/
+.black {
+  color: #231F20;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.lt-red {
+  color: #8B4040;
+}
+
+.red {
+  color: #701515;
+}
+
+.green {
+  color: #226C6F;
+}
+
+:root {
+  font-size: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1.667, 1rem);
+  font-family: "Avenir", ff-scala-sans-pro, sans-serif;
+}
+
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Avenir", ff-scala-sans-pro, sans-serif #FFFFFF;
+  background: radial-gradient(closest-side, #000000, #000000, #2c2c2c);
+  overflow: hidden; /*hides scrollbars*/
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%;
+  height: 10vh;
+  font-family: "Avenir", ff-scala-sans-pro, sans-serif;
+  margin: 3rem;
+}
+
+.home-btn {
+  color: #FFFFFF;
+  text-align: right;
+  position: fixed;
+  font-family: "Avenir", ff-scala-sans-pro, sans-serif;
+  bottom: 10px;
+  width: 100%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+/* Book */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: auto; /* Center the DIV horizontally */
+}
+
+.page {
+  padding: 2em;
+}
+.page .book-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.page img {
+  object-fit: contain;
+}
+.page blockquote {
+  font-size: clamp(1rem, 1rem + (1vw - 0.2rem) * 1.667, 1.5rem);
+  font-style: italic;
+  font-weight: 500;
+}
+.page figcaption {
+  text-transform: uppercase;
+}
+.page hr {
+  border: 1px solid #833434;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.page-bkg {
+  background-color: #FFFFFF;
+}
+.page-bkg_red {
+  background-color: #701515;
+}
+.page-bkg_gray {
+  background-color: #CFD8DA;
+}
+.page-bkg_green {
+  background-color: #226C6F;
+}
+.page-bkg_red-gray {
+  background: linear-gradient(to bottom, #701515 0%, #701515 30%, #CFD8DA 30%, #CFD8DA 100%);
+}
+.page-bkg_red-white {
+  background: linear-gradient(to bottom, #701515 0%, #701515 30%, #FFFFFF 30%, #FFFFFF 100%);
+}
+.page.--left {
+  border-right: 0;
+  box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+}
+.page.--right {
+  border-left: 0;
+  box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+}
+
+/* Controller Buttons */
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: "Avenir", ff-scala-sans-pro, sans-serif;
+}
+
+i {
+  padding-bottom: 5px;
+  font-size: 50px;
+  color: #FFFFFF;
+}
+
+/*  
+*  Modal Content 
+*/
+/* Trigger Opening the Modal */
+.hidden {
+  visibility: hidden;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  /* background-color: rgba(0,0,0,0.9); Black w/ opacity */
+  overflow: hidden;
+}
+
+/* Modal Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #e5d1b9;
+  font-size: 80px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/*Modal Zoom in btn*/
+.zoom {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  color: #e5d1b9;
+  transition: 0.3s;
+  padding: 30;
+}
+
+.zoom-btn {
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+/* Modal content Image */
+.pinch-zoom-container {
+  overflow: hidden;
+  height: 90%;
+  width: 70%;
+  touch-action: none !important;
+}
+
+.pinch-zoom-image {
+  width: 100%;
+  touch-action: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */
