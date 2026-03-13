@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
              size: "stretch",
             // set threshold values:
-            minWidth: 250,
-            maxWidth: 500,
-            minHeight: 333,
-            maxHeight: 666,
+            minWidth: 300,
+            maxWidth: 450,
+            minHeight: 500,
+            maxHeight: 600,
             
             flippingTime: 500,
             swipeDistance: 30,
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     );
 
-
+console.log(pageFlip.width)
 
     // load pages
     pageFlip.loadFromHTML(document.querySelectorAll(".page"));
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeBook(){
  
         while (document.querySelector(".page-current").innerText > 1){
-           console.log(document.querySelector(".page-current").innerText);
-           console.log(pageFlip.getCurrentPageIndex());
+        //    console.log(document.querySelector(".page-current").innerText);
+        //    console.log(pageFlip.getCurrentPageIndex());
             if (pageFlip.getOrientation() == 'landscape') {
                 pageFlip.flipPrev();
             } else {
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
     
 
-        console.log(document.querySelector(".page-current").innerText);
-        console.log(pageFlip.getCurrentPageIndex());
+        // console.log(document.querySelector(".page-current").innerText);
+        // console.log(pageFlip.getCurrentPageIndex());
         
 
         }

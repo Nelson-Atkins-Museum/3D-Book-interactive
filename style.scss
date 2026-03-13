@@ -1,39 +1,37 @@
 /* 
 Variables 
 */
-$bkgd-red       : #701515;
-$bkgd-white     : #FFFFFF;
-$bkgd-gray      : #CFD8DA;
-$bkgd-green      :#226C6F;
+$color-red          : #701515;
+$color-white        : #FFFFFF;
+$color-gray         : #CFD8DA;
+$color-green        :#226C6F;
 
-$text-white     : #FFFFFF;
-$text-lt-red    : #8B4040;
-$text-red       : #701515;
-$text-blk       : #231F20;
-$text-green     : #226C6F;
+$color-lt-red       : #8B4040;
 
-$hr             : #833434;
-$green-bar      : #ADC5C7;
+$color-blk          : #231F20;
 
-$primary-font   : 'Avenir', ff-scala-sans-pro, sans-serif;
-$primary-font-size: clamp(.75rem, .75rem + ((1vw - 0.2rem) * 1.667), 1rem); 
+$hr                 : #833434;
+$green-bar          : #ADC5C7;
+
+$primary-font       : 'Avenir', ff-scala-sans-pro, sans-serif;
+$primary-font-size  : clamp(.75rem, .75rem + ((1vw - 0.2rem) * 1.667), 1rem); 
 
 
 // text colors
 .black {
-    color: $text-blk;
+    color: $color-blk;
 }
 .white {
-        color: $text-white;
+        color: $color-white;
 }
 .lt-red {
-        color: $text-lt-red;
+        color: $color-lt-red;
 }
 .red {
-        color: $text-red;
+        color: $color-red;
 }
 .green {
-        color: $text-green;
+        color: $color-green;
 }
 
 :root{
@@ -65,21 +63,34 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 85%;
-    height: 10vh;
     font-family: $primary-font;
-    margin: 3rem;
+    margin: 2rem;
+    gap: 2rem;
+    position: relative;
+    top: 0px;
+
+    img {
+        object-fit: contain;
+
+    }
 }
        
 .home-btn {
-    color: $text-white;
+    display: block;
+    color: $color-white;
     text-align: right;
-    position: fixed;
     font-family: $primary-font;
-    bottom: 10px;
+    font-size: $primary-font-size;
+    bottom: 0px;
     width: 100%;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
+    position: relative;
+
+    .fas {
+       font-size: $primary-font-size;
+    }
+    
 }
         
     
@@ -93,63 +104,87 @@ body {
 }
 
 .container{
-    width: 90%;
+    max-width: 90vw;
+    max-height: 50vh;
+    width: 100%;
+    // // height: 80%;
     margin: auto; /* Center the DIV horizontally */
+    padding: 0px;
 }
 
 .page {
     padding: 2em;
 
-
-
-    .book-desc{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .page-content {
+        width: 100%;
         height: 100%;
-    }
-    img{
-        object-fit: contain;
-    }
-    blockquote {
-        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 1.5rem) ;
-        font-style: italic;
-        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: stretch;
 
-    }
-    figcaption {
-        text-transform: uppercase;
-        
-    }
-    hr {
-        border:1px solid $hr;
-        margin-top: 2em;
-        margin-bottom: 1em;
-    }
+        .book-desc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
 
-ol {
-    li {
+        img{
+            object-fit: contain;
+            width: 100%;
+            max-height: 100%;
+            margin: 0px;
+        }
 
-    }
+        blockquote {
+            font-size: clamp(.75rem, 1rem + ((1vw - 0.2rem) * 1.667), 1.125rem) ;
+            font-style: italic;
+            font-weight: 500;
+            text-wrap: pretty;
+
+        }
+
+        figcaption {
+            text-transform: uppercase;
+            margin-top: .5rem;
+             font-weight: 500;
+        }
+
+        hr {
+            border:1px solid $hr;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            width: 100%;
+        }
+        p{
+            font-size: $primary-font-size;
+        }
+
+    ol {
+        li {
+
+        }
 }
+     }
 
     &-bkg{
-        background-color: $bkgd-white;
+        background-color: $color-white;
 
         &_red{
-            background-color: $bkgd-red;
+            background-color: $color-red;
         }
         &_gray{
-            background-color: $bkgd-gray;
+            background-color: $color-gray;
         }
         &_green{
-            background-color: $bkgd-green;
+            background-color: $color-green;
         }
         &_red-gray{
-            background: linear-gradient(to bottom, $bkgd-red 0%, $bkgd-red 30%, $bkgd-gray 30%, $bkgd-gray 100%);
+            background: linear-gradient(to bottom, $color-red 0%, $color-red 30%, $color-gray 30%, $color-gray 100%);
         }
             &_red-white{
-            background: linear-gradient(to bottom, $bkgd-red 0%, $bkgd-red 30%, $bkgd-white 30%, $bkgd-white 100%);
+            background: linear-gradient(to bottom, $color-red 0%, $color-red 30%, $color-white 30%, $color-white 100%);
         }
     }       
 
@@ -172,14 +207,14 @@ button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: $text-white;
+    color: $color-white;
     font-family: 'Avenir',  ff-scala-sans-pro, sans-serif;
 }
 
 i {
     padding-bottom: 5px;
     font-size: 50px;
-    color: $text-white;
+    color: $color-white;
 }
 
 /*  
