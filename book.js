@@ -5,27 +5,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageFlip = new St.PageFlip(
         document.getElementById("Book"),
         {
-            width: 450, // base page width
+            width: 500, // base page width
             height: 600, // base page height
 
-             size: "stretch",
+            size: "stretch",
             // set threshold values:
-            minWidth: 300,
-            maxWidth: 450,
-            minHeight: 500,
-            maxHeight: 600,
+            minWidth: 400,
+            maxWidth: 1200,
+
+            minHeight: 300,
+            maxHeight: 1200,
             
             flippingTime: 500,
             swipeDistance: 30,
             disableFlipByClick: true,//false: turn page by clicking anywhere on page 
             maxShadowOpacity: 0.5, // shadow intensity
             showCover: false, //false: keeps book open
-            mobileScrollSupport: false,// disable content scrolling on mobile devices
+            mobileScrollSupport:false,// disable content scrolling on mobile devices
             // usePortrait: true,
         }
     );
-
-console.log(pageFlip.width)
 
     // load pages
     pageFlip.loadFromHTML(document.querySelectorAll(".page"));
@@ -35,6 +34,8 @@ console.log(pageFlip.width)
 
     // prev/nex button function
    document.querySelector(".btn-prev").addEventListener("click", () => {
+    // console.log(pageFlip.getOrientation())
+      pageFlip.turnToPrevPage();
       if (pageFlip.getOrientation() == 'landscape') {
                 pageFlip.flipPrev(); // Turn to the previous page (with animation)
             } else {
@@ -49,6 +50,7 @@ console.log(pageFlip.width)
 
     // triggered by page turning
     pageFlip.on("flip", (e) => {
+        console.log("page flip")
         document.querySelector(".page-current").innerText = e.data + 1;
     });
 
@@ -63,15 +65,22 @@ console.log(pageFlip.width)
     });
 
 
-    function closeBook(){
+    function closeBook(e){
+        let count = document.querySelector(".page-current").innerText;
+        let pageNum = parseInt(count);
+        console.log(parseInt(count));
  
-        while (document.querySelector(".page-current").innerText > 1){
+        while (pageNum > 0) {
         //    console.log(document.querySelector(".page-current").innerText);
         //    console.log(pageFlip.getCurrentPageIndex());
             if (pageFlip.getOrientation() == 'landscape') {
+                // console.log(pageFlip.getOrientation())
                 pageFlip.flipPrev();
-            } else {
+                console.log(pageNum);
+            } else if (pageFlip.getOrientation() == 'portrait')  {
+                //  console.log(pageFlip.getOrientation())
                 pageFlip.turnToPrevPage();
+                console.log(pageNum);
             }
         
     

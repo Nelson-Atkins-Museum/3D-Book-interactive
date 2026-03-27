@@ -33,7 +33,7 @@
 <body>
     <div class="header">
         <img  
-            src="Img\Page 1_Sternfeld.jpg" 
+            src="Img\2022-25-11_Sternfeld-ExhaustedRenegadeElephant.jpg" 
             alt="A black and white photograph of a light-skinned, young man taking a photograph outside. He reaches toward and looks at a large-format camera on a tripod."
             >
         </img> 
@@ -53,8 +53,7 @@
             <p>
             Gift of Peggy and William Lyons, 2022.25.11
             </p>
-        </div>
-       
+        </div>  
     </div>
 
     <div class="row">
@@ -89,12 +88,26 @@
 
         <!-- turnpage book  -->   
         <div class="container">
+            <div class="home-btn">
+                <button id="home-btn" >
+                    <i class="fas fa-book"></i>
+                    <br>
+                    <p>Close Book</p>
+                    <p>[<span class="page-current">1</span> of <span class="page-total">-</span>]</p>
+                </button>
+                <p 
+                style="display: none; visibility: hidden;"
+                >
+                 <!-- <p > -->
+                    State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+                </p>
+            </div>
             <div class="flip-book" id="Book">
 
                 <div class="page page-bkg" >
                     <div class="page-content book-desc">
              
-                            <p>What's the story beyond the frame?</p>
+                            <h1>What's the story beyond the frame?</h1>
                     </div>
                 </div>
         <!-- Page 1 -->
@@ -105,7 +118,7 @@
                             alt="A black and white photograph of a light-skinned, young man taking a photograph outside. He reaches toward and looks at a large-format camera on a tripod."
                             width="100%">
                         </img> 
-                        <figure class="quote white">
+                        <figure class=" white bold">
                             <blockquote>
                                 <q>
                                 You take 35 degrees out of 360 degrees and call it a photo. No individual photo explains anything.
@@ -129,31 +142,43 @@
                     <div class="page-content">
                     <ol  >
                             <li >
-                                <h3 class="red">
+                                <div>
+                                <p class="red bold">
                                     Let your eyes wander over the
                                     photograph above on the wall.
-                                </h3>
+                                </p>
+                                
                                 <p>
                                     What story might this photograph be telling?
+                                    </p>
+                                    
+                                    <p>
                                     What do you see that supports that story?
                                 </p>
-                                <h3 class="red">
+                                  
+                                <p class="red bold">
                                     Look again.
-                                </h3>
+                                </p>
+                                  
                                 <p>
                                     What more can you find that confirms
                                     or challenges your ideas?
                                 </p>
+                               
+                                </div>
                             </li>
                             <li>
-                                <h3 class="red">
+                                <div >
+                                <p class="red bold">
                                     Read the label on the wall
                                     next to the photograph.
-                                </h3>
+                                </p>
+                                 
                                 <p>
                                     How might the label inform
                                     the story you see? 
                                 </p>
+                          </div>
                             </li>
                     </ol>
                     </div>
@@ -161,8 +186,8 @@
         <!-- Page 3 -->
                 <div class="page page-bkg">
                     <div class="page-content">
-                        <figure class="quote green">
-                            <blockquote>
+                        <figure class=" green">
+                            <blockquote class="bold">
                                 <q>
                                 You take 35 degrees out of 360 degrees and call it a photo. No individual photo explains anything.
                                 </q>
@@ -171,37 +196,36 @@
                                     Joel Sternfeld’s photograph represents one moment of a larger story.
                                 </p>
                         </figure>
-                        <h3 class="white">
+                        <p class="red-flag" >
                             Turn the page to discover more.
-                        </h3>
+                        </p>
                     
                     </div>
                 </div>
         <!-- Page 4 -->
                 <div class="page page-bkg_red-gray">
-                    <div class="page-content">
-                        <h3 class="white">
+                    <div class="page-content" style="gap: 3rem;">
+                        <h2 class="white font__large">
                             How might these headlines change your ideas about the photograph?
-                        </h3>
-                        <img  
-                            src="Img\Page 4_Woodland trainer found dead next to elephant.png" 
-                            alt="
-    A grainy, black and white newspaper clipping of two men, at right, kneeling beside a chained, prone elephant, at left. At bottom in large, typed text reads “Woodland trainer found dead next to elephant.” Just above, in smaller text, reads “The drama of Morgan Berry’s death ended today as his son Kenneth, and game agent Jack Barker kneel by a tranquilized elephant near Morgan’s wild animal farm outside Woodland.” 
-                            ">
-                        </img> 
-                        <img  
-                            src="Img\Page 4_The_Roswell_Daily_Record.jpg" 
-                            alt="
-                            A black and white newspaper masthead and headline. The masthead reads, “The Daily Sentinel.” Below reads the headline, “Elephant goes on rampage: Famed Trainer Trampled.”  
-                            ">
-                        </img> 
-
+                        </h2>
+                            <img  
+                                src="Img\Page 4_Woodland trainer found dead next to elephant.png" 
+                                alt="
+        A grainy, black and white newspaper clipping of two men, at right, kneeling beside a chained, prone elephant, at left. At bottom in large, typed text reads “Woodland trainer found dead next to elephant.” Just above, in smaller text, reads “The drama of Morgan Berry’s death ended today as his son Kenneth, and game agent Jack Barker kneel by a tranquilized elephant near Morgan’s wild animal farm outside Woodland.” 
+                                ">
+                            </img> 
+                            <img  
+                                src="Img\Page 4_The_Roswell_Daily_Record.jpg" 
+                                alt="
+                                A black and white newspaper masthead and headline. The masthead reads, “The Daily Sentinel.” Below reads the headline, “Elephant goes on rampage: Famed Trainer Trampled.”  
+                                ">
+                            </img> 
 
                     </div>
                 </div>
         <!-- Page 5 -->
                 <div class="page page-bkg_red-gray">
-                    <div class="page-content">
+                    <div class="page-content" style="margin-top: 30%; height: 70%; gap: 3rem;">
                         <img  
                             src="Img\Page 5_Daily_Sitka_Sentinel.jpg" 
                             alt="
@@ -221,7 +245,7 @@
                 </div>
         <!-- Page 6 -->
                 <div class="page page-bkg_red">
-                    <div class="page-content">
+                    <div class="page-content" style="gap: 3rem;">
                         <img  
                             src="Img\Page 6_The_Ottawa_Journal masthead.jpg" 
                             alt="
@@ -242,15 +266,16 @@
         <!-- Page 7 -->
                 <div class="page page-bkg">
                     <div class="page-content">
-                        <h3 class="red">
+                        <h2 class="red">
                             How might this article change your ideas about the photograph?
-                        </h3>
-                        <figure class="quote page-bkg_gray">
-                            <blockquote>
-                                <h1>
+                        </h2>
+                        <figure class="quote " >
+                            <blockquote >
+                                <h3 class="font__large">
                             Elephant trainer dies on the job
-                                </h1>
-                                <p>
+                                </h3>
+                            
+                                <p class="font__small">
     Woodland, Washington (AP)—The trampled body of renowned 
     elephant trainer Morgan Berry was pulled away from a bull 
     elephant [named Buddha] Wednesday...
@@ -261,21 +286,19 @@
     heart trouble, may have had a heart attack while working with the 
     elephant...
                                 </p>
-                                <p>
+                                <p class="font__small">
     A second bull elephant, <strong>Thai</strong>, which had escaped through the 
     farm’s chain link fence, was shot with a tranquilizer gun about two 
     kilometres from the farm.
                                 </p>
-                                <div class="page-bkg_green">
-                                    <h3 class="white">
-                                        Thai is the <q>renegade elephant</q> in Sternfeld’s photograph.
-                                    </h3>
+                                    <blockquote class="white page-bkg_green font__small" style="padding: 2cqi; font-style:normal;margin-left: 10cqi;margin-right: 10cqi;">
+                                        <strong>Thai</strong> is the <q>renegade elephant</q> in Sternfeld’s photograph.
+                                    </blockquote>
 
-                                </div>
                             </blockquote>
-                                <h4 class="black">
+                                <p class="font__small">
                                     Excerpt from The Ottawa Journal | June 28, 1979
-                                </h4>
+                                </p>
                         </figure>
 
                     </div>
@@ -283,9 +306,9 @@
         <!-- Page 8 -->
                 <div class="page page-bkg">
                     <div class="page-content">
-                        <h3 class="red">
+                        <h2 class="red">
                         What might Sternfeld’s story reveal about his perspective? 
-                        </h3>
+                        </h2>
                         <img  
                             src="Img\Page 8_@sternfeldarchive image.jpg" 
                             alt="
@@ -300,33 +323,33 @@
                 </div>
         <!-- Page 9 -->
                 <div class="page page-bkg">
-                    <div class="page-content">
-                    <figure class="quote ">
-                            <blockquote>
-                                <p><q>
+                    <div class="page-content font__small">
+                    <figure >
+                            <blockquote >
+                                <p class="font__small"><q>
                                 As I headed north on Interstate 5 I turned on the radio, my principal 
                                 source of news: an elephant had escaped from a training farm in the 
                                 hills west of Mt. Helens and had gone on a rampage. My first impulse 
                                 was to not go but it was right on my route and I couldn’t resist so I 
                                 dutifully pulled off the highway. 
                                 </p>
-                                <p>
+                                <p class="font__small" style="margin-bottom: 0px;">
                                 With the radio’s instructions it was fairly easy to find the road on 
                                 which the now captured elephant was being led back. His trainer, 
                                 Morgan Berry, had died the previous evening, most likely of a heart 
                                 attack. Thai was reluctant to follow anybody but Mr. Berry and so a 
                                 female elephant was brought in to lure him back—to little avail. 
                                 </p>
-                                <p class="green">
+                                <p class="green font__large">
                                 . . . 
                                 </p>
-                                <p>
+                                <p class="font__small">
 
                                 Then Thai, hot, traumatized, tranquilized and exhausted collapsed in 
                                 the road. A boy got out a bucket of water and tossed it. As he did so 
                                 I photographed again. 
                                 </p>
-                                <p>
+                                <p class="font__small" style="margin-bottom: 0px;">
                                 What happened next I can only describe: the elephant and all the 
                                 handlers who had been up all night, went to sleep in the road. Only 
                                 the sheriff and I were awake, but I was out of film.”
@@ -339,25 +362,27 @@
                                     </p>
                                 </figcaption>
                         </figure>
-                    
-
-
-
-
                     </div>
                 </div>
         <!-- Page 10 -->
                 <div class="page page-bkg">
-                    <div class="page-content">
-                        <div class="page-bkg_green">
-                            <h1 class="white">
+                    <div class="page-content" style="justify-content: space-around;">
+                        <div class="page-bkg_green"
+                        style="
+                            position: absolute;
+                            left: 0px;
+                            right: 0px;
+                            top: 15cqi;
+                            padding: 8cqi;
+                            
+                            margin-top: 10cqi;
+                        ">
+                            <h2 class="white" style="padding-left: 10cqi;margin-bottom: 0px;margin-right:  30cqi; text-wrap: pretty;">
                                 What’s still missing from the story?
-                            </h1>
+                            </h2>
                         </div>
-                        <p>
-                            Think about what photographers choose to show you.
-                        </p>
-                        <p>
+                    
+                        <p style="padding: 4cqi; margin: 4cqi;">
                             Photographs show one moment of a larger story: 35 degrees out of a 360-degree view.
                         </p>
                     </div>
@@ -365,23 +390,24 @@
         <!-- Page 11 -->
                 <div class="page page-bkg">
                     <div class="page-content">
-                        <h3 class="red">
-                            Continue the curiosity! Think about what you see as you explore these galleries.
+                        <div>
+                        <h3 class="red" style="margin-bottom: 10cqi;">
+                        Continue the curiosity! Think about what you see as you explore these galleries.
                         </h3>
                         <p>
-                            What story might this photograph be telling?
+                        What story might this photograph be telling?
                         </p>
                         <p>
                         What do you see that supports that story?  
                         </p>
                         <p>
-                            What more can you find that confirms or challenges your ideas?
+                        What more can you find that confirms or challenges your ideas?
                         </p>
-                        <div class="page-bkg_red">
-                            <p class="white">
-                                Close the book to finish Thai’s story.
-                            </p>
                         </div>
+                        <p class="red-flag">
+                            Close the book to finish Thai’s story.
+                        </p>
+                    
                         
                     </div>
                 </div>
@@ -432,7 +458,7 @@
             <!-- Back Page -->
                 <div class="page page-bkg_gray page-cover page-cover-bottom" data-density="hard">
                     <div class="page-content">
-                        <button class="white"  id="close-btn" >
+                        <button class="white font__large"  id="close-btn" >
                             Flip back to the beginning
                         </button>
                     </div>
@@ -450,17 +476,6 @@
     </div>
    
 
-    <footer class="home-btn">
-        <button id="home-btn" >
-            <i class="fas fa-book"></i>
-            <br>
-            <p>Close Book</p>
-            <p>[<span class="page-current">1</span> of <span class="page-total">-</span>]</p>
-        </button>
-        <div style="display: none; visibility: hidden;">
-            State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
-        </div>
-    </footer> 
 
 </body>
 </html>
