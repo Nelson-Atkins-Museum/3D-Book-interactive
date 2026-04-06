@@ -88,20 +88,7 @@
 
         <!-- turnpage book  -->   
         <div class="container">
-            <div class="home-btn">
-                <button id="home-btn" >
-                    <i class="fas fa-book"></i>
-                    <br>
-                    <p>Close Book</p>
-                    <p>[<span class="page-current">1</span> of <span class="page-total">-</span>]</p>
-                </button>
-                <p 
-                style="display: none; visibility: hidden;"
-                >
-                 <!-- <p > -->
-                    State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
-                </p>
-            </div>
+            
             <div class="flip-book" id="Book">
 
                 <div class="page page-bkg" >
@@ -112,28 +99,64 @@
                 </div>
         <!-- Page 1 -->
                 <div class="page page-bkg_red" >
-                    <div class="page-content">
-                        <img  
-                            src="Img\Page 1_Sternfeld.jpg" 
-                            alt="A black and white photograph of a light-skinned, young man taking a photograph outside. He reaches toward and looks at a large-format camera on a tripod."
-                            width="100%">
-                        </img> 
-                        <figure class=" white bold">
-                            <blockquote>
+                    <div class="page-content" style="justify-content: flex-start;">
+                        <div class="white">
+                            <h1>
+                                <em>BREAKING NEWS!</em>
+                            </h1>
+                            <h2>
+                                Thai is alive and thriving at Houston Zoo
+                            </h2>
+                        </div>
+                        <p>
+                        After Thai’s escape from Morgan Berry’s farm, he was relocated to the Houston Zoo in 1980. In 2025, he celebrated his 60th birthday, making him the second oldest male Asian elephant in North America.
+                        </p>
+                        <div class="page14">
+                           <img  
+                            src="Img\Page 12_Thai-Historical-Photo-1980_LEFT.jpg" 
+                            alt="
+    A black and white photograph of an adult male Asian elephant, at left, with a dark-haired woman, at right, outside. The elephant reaches his trunk toward the woman over the fence. 
+                            "></img> 
+                            <img  
+                            src="Img\Page 12_Thai-Joy-Photo-2017_RIGHT.jpg" 
+                            alt="
+    A color photograph of a large, adult male Asian elephant and baby elephant in an enclosure. The baby elephant stands underneath the adult elephant. 
+                            "></img> 
+                        </div>
+                        <div>
+                            LEFT: Thai with a zookeeper in 1980 when he arrived in Houston. Photo courtesy of Houston Zoo
+                            
+                            RIGHT
+                        </div>
+                    </div>
+                    <!-- <div class="page-content">
+                        <figure class="page1">
+                            <img  
+                                src="Img\Page 1_Sternfeld.jpg" 
+                                alt="A black and white photograph of a light-skinned, young man taking a photograph outside. He reaches toward and looks at a large-format camera on a tripod."
+                                width="100%">
+                            </img> 
+                            <figcaption>
+                                Photo by Jonathan Reff
+                            </figcaption>
+                        </figure>
+                      
+                        <figure >
+                            <blockquote class=" white bold">
                                 <q>
                                 You take 35 degrees out of 360 degrees and call it a photo. No individual photo explains anything.
                                 </q>
                             </blockquote>
-                                <figcaption class="lt-red">
-                                    &mdash; Joel Sternfeld
-                                </figcaption>
+                            <figcaption class="lt-red">
+                                &dash; Joel Sternfeld
+                            </figcaption>
                         </figure>
                         <hr>
                         <p class="white">
                             Flip through this book to discover the story beyond the frame.
                         </p>
 
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- PAGES .... -->
@@ -143,10 +166,10 @@
                     <ol  >
                             <li >
                                 <div>
-                                <p class="red bold">
+                                <h3 class="red bold">
                                     Let your eyes wander over the
                                     photograph above on the wall.
-                                </p>
+                                </h3>
                                 
                                 <p>
                                     What story might this photograph be telling?
@@ -156,9 +179,9 @@
                                     What do you see that supports that story?
                                 </p>
                                   
-                                <p class="red bold">
+                                <h3 class="red bold">
                                     Look again.
-                                </p>
+                                </h3>
                                   
                                 <p>
                                     What more can you find that confirms
@@ -169,10 +192,10 @@
                             </li>
                             <li>
                                 <div >
-                                <p class="red bold">
+                                <h3 class="red bold">
                                     Read the label on the wall
                                     next to the photograph.
-                                </p>
+                                </h3>
                                  
                                 <p>
                                     How might the label inform
@@ -245,8 +268,9 @@
                 </div>
         <!-- Page 6 -->
                 <div class="page page-bkg_red">
-                    <div class="page-content" style="gap: 3rem;">
-                        <img  
+                    <div class="page-content ">
+                        <div class="page7">
+                            <img  
                             src="Img\Page 6_The_Ottawa_Journal masthead.jpg" 
                             alt="
                         A black and white newspaper masthead that reads, “Ottawa Journal.” Below, in smaller type, “Thursday, June 28, 1979.”    
@@ -259,13 +283,12 @@
                             ">
                         </img> 
                         
-
-
+                        </div>
                     </div>
                 </div>
         <!-- Page 7 -->
                 <div class="page page-bkg">
-                    <div class="page-content">
+                    <div class="page-content" style="justify-content: start;">
                         <h2 class="red">
                             How might this article change your ideas about the photograph?
                         </h2>
@@ -280,7 +303,7 @@
     elephant trainer Morgan Berry was pulled away from a bull 
     elephant [named Buddha] Wednesday...
                                 </p>
-                                <p>
+                                <<p class="font__small">
     Gary Waddell, chief criminal deputy for the Cowlitz County 
     sheriff’s office, said the 68-year-old Berry, who had a history of 
     heart trouble, may have had a heart attack while working with the 
@@ -475,7 +498,20 @@
         </button>
     </div>
    
-
+<div class="home-btn">
+                <button id="home-btn" >
+                    <i class="fas fa-book"></i>
+                    <br>
+                    <p>Close Book</p>
+                    <p>[<span class="page-current">1</span> of <span class="page-total">-</span>]</p>
+                </button>
+                <p 
+                style="display: none; visibility: hidden;"
+                >
+                 <!-- <p > -->
+                    State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+                </p>
+            </div>
 
 </body>
 </html>
