@@ -79,340 +79,351 @@ p {
 }
 
 *{
-    margin: auto;
+    // margin: auto;
     padding:auto;
     box-sizing: border-box;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background: radial-gradient(closest-side,#000000, #000000,  #2c2c2c);
-    overflow: hidden; /*hides scrollbars*/
-    // overflow-y: auto;
-}
-
-
-.header {
-    position:relative;
-    top: 0px;
-    height: 20vh;
-    margin: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
-    gap: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    img {
-        object-fit: contain;
-        height: 100%;
-        margin: 0px;
-        text-align: center
-    }
-}
-       
-/* Book */
-.row {
-    position:relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
 
-    width: 100%;
-    height: 65vh;
-    gap: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
-    padding: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
+    background: radial-gradient(closest-side,#000000, #000000,  #2c2c2c);
+    
+    overflow: hidden; /*hides scrollbars*/
+    // overflow-y: auto;
 
-    .container {
-        display:flex;
-        flex-direction: column-reverse;
-        max-width: 90vw;
-        // max-height: 60vh;
+     .row {
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
         width: 100%;
-        max-height: 100%;
-        margin: 0px;
+        gap: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
+        padding: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
+    }
+    
 
-    .page {
-        
-        // padding: clamp(2rem, 4cqi, 4rem); 
-        // line-height: 1.5;
-       
-        .page-content {
-            container-type: inline-size;
-            width: 100%;
+    header {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+        height: 20vh;
+
+        & img {
+            object-fit: contain;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding: clamp(2rem, 5cqi, 3rem); 
+            margin: 0px;
+            text-align: center
+        }
+    }
+   
+    nav{             
+        /* Controller Buttons */
+        bottom: 0px;
+        justify-content: space-between;
+        height: 15vh;
 
-            // h1 {
-            //     font-size: $h1-font-size ;
-            // }
-            // h2 {
-            //     font-size: $h2-font-size ;
-            //     margin-top: 0px;
-            //     margin-bottom:3cqi;
-            // }
-            // h3 {
-            //     font-size: $h3-font-size ;
-            //     margin-bottom: 1rem;
-            // }
-            // h4 {
-            //     font-size: $h4-font-size ;
-            // }
-            // h5 {
-            //     font-size: $h5-font-size ;
-            // }
-            // h6 {
-            //     font-size: $h6-font-size ;
-            // }
-            // p {
-            //     font-size: $p-font-size ;
-            //     // margin-top: $font-large;
-            //     margin-bottom: $h4-font-size;
-            //     text-wrap: pretty;
-            // }
-            .font {
-                &__small{
-                    font-size: $font-small  ;  
-                }
-                &__med{
-                    font-size: $font-med;
-                }
-                &__large{
-                    font-size:$font-large;
-                    // line-height: 2;
-                }
-            }
-
-            .bold{
-                font-weight: 500;
-            }
-
-
-            .book-desc{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-            }
-            img {
-                max-width: 100%;
-            height: auto;
-            display: block;
-                // object-fit: contain;
-                // width: 100%;
-                // // max-height: auto;
-                // // height: 70%;
-                
-            } 
-
-            
-
-            figure {
-                &.page1{
-                    margin-top: 0px;
-                    margin-bottom: 2em;
-                    height: 40%;
-                   img{
-                        object-fit: contain;
-                        // width: 100%;
-                        // max-height: auto;
-                        height: 100%;
-                        
-                    } 
-                    figcaption{
-                        color: $color-white;
-                        text-align: right;
-                        font-size: clamp(.5rem, $font-large, .75rem) ;
-                        text-transform: none;
-                        font-weight: normal;
-                    }
-                }
-
-                blockquote {
-                    font-size: $h4-font-size;
-                    font-style: italic;
-                    line-height: 1.5;
-                    // font-weight: 500;
-                    margin-bottom: .5rem;
-                    text-wrap: pretty;
-                    padding-top: clamp(.5rem, $font-large, .75rem) ; 
-                    padding-bottom: clamp(.5rem, $font-large, .75rem) ;
-                }
-                 figcaption {
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    font-size: $font-med;
-                }
-
-            }
-            .page7 {
-                 display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: space-evenly;
-                max-height: 100%;
-                height: auto;
-             
-                margin: 0;
-                 
-                & img{
-            
-                    margin-top: 0;
-                    object-fit: contain;
-                    flex-grow: 1;
-                    flex-shrink: 2;
-                    flex-basis: auto;
-                    width: 100%;
-                    height: 70%;
-                    // min-width: 0;
-                    
-                    margin:0;
-                }
-            }
-            
-            .page14 {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: space-evenly;
-                gap: 1rem;
-                height: 40%;
-                width: 100%;
-                margin:0;
-                padding: 0;
-                    left: clamp(-2rem, -5cqi, -3rem);
-
-                    position: relative;
-                img{
-            
-                    margin-top: 0;
-                    object-fit: contain;
-                    flex: 1;
-                    width: 100%;
-                    height: 100%;
-                    // min-width: 0;
-                    
-                    margin:0;
-                }
-            }
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            color: $color-white;
            
-
-            hr {
-                border:1px solid $hr;
-                margin-top: 2em;
-                margin-bottom: 1em;
-                width: 100%;
+            p { 
+                margin: 0px; 
             }
 
+            i {
+                padding-bottom: 5px;
+                font-size: 3cqi;
+                margin: 0;
+            }
+        }
+    }
+    /* Book */
+    main{
+        .container {
+            flex:2;
+            height:100%;
+          
+           .flip-book {
+                max-height:60vh;
+                height: auto;
+           }
+       
+        .page {
+            
+            // padding: clamp(2rem, 4cqi, 4rem); 
+            // line-height: 1.5;
+            &-bkg {
+                background-color: $color-white;
 
-            ol {
-                list-style: none;
-                counter-reset: list-number;
-                padding: 0;
+                &_red{
+                    background-color: $color-red;
+                }
+                &_gray{
+                    background-color: $color-gray;
+                }
+                &_green{
+                    background-color: $color-green;
+                }
+                &_red-gray{
+                    background: linear-gradient(to bottom, $color-red 0%, $color-red 20%, $color-gray 20%, $color-gray 100%);
+                }
+                &_red-white{
+                    background: linear-gradient(to bottom, $color-red 0%, $color-red 20%, $color-white 20%, $color-white 100%);
+                }
+            }       
 
-                li {
-                    &:before {
-                        counter-increment: list-number;
-                        content: counter(list-number);
-                        
-                        // margin-right: 10px;
-                        margin-bottom:clamp(.5rem,$font-large, .75rem) ;
-                        width:clamp(1.25rem,$font-large, 2.5rem) ;
-                        height:clamp(1.25rem,$font-large, 2.5rem) ;
-                        display:inline-flex;
-                        align-items:center;
-                        justify-content: center;
-                        font-size:clamp(.75rem,$font-large, 1.5rem) ;
-                        background-color: $color-red;
-                        border-radius:50%;
-                        color: $color-white;
+            &.--left { // for left page (property will be added automatically)
+                border-right: 0;
+                box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+            }
+
+            &.--right { // for right page (property will be added automatically)
+                border-left: 0;
+                box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+            }
+        
+            .page-content {
+                container-type: inline-size;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: clamp(2rem, 5cqi, 3rem); 
+
+                // h1 {
+                //     font-size: $h1-font-size ;
+                // }
+                // h2 {
+                //     font-size: $h2-font-size ;
+                //     margin-top: 0px;
+                //     margin-bottom:3cqi;
+                // }
+                // h3 {
+                //     font-size: $h3-font-size ;
+                //     margin-bottom: 1rem;
+                // }
+                // h4 {
+                //     font-size: $h4-font-size ;
+                // }
+                // h5 {
+                //     font-size: $h5-font-size ;
+                // }
+                // h6 {
+                //     font-size: $h6-font-size ;
+                // }
+                // p {
+                //     font-size: $p-font-size ;
+                //     // margin-top: $font-large;
+                //     margin-bottom: $h4-font-size;
+                //     text-wrap: pretty;
+                // }
+                .font {
+                    &__small{
+                        font-size: $font-small  ;  
+                    }
+                    &__med{
+                        font-size: $font-med;
+                    }
+                    &__large{
+                        font-size:$font-large;
+                        // line-height: 2;
                     }
                 }
-            }
-            .red-flag{
-                padding: 3cqi; 
-                position: absolute; 
-                right: 0px; 
-                left: 20cqi;
-                bottom: 6cqi;
-                font-size: $p-font-size;
-                color: $color-white;
-                background: $color-red;
-            }
-            .quote{
-                position: absolute;
-                right: 0px;
-                padding-right: 10cqi;
-                padding-left: $font-med;
-                margin-left: 10cqi;
-                margin-top: 20cqi;
-                background: $color-gray
-            }
-        }
-        
 
-        &-bkg {
-            background-color: $color-white;
-
-            &_red{
-                background-color: $color-red;
-            }
-            &_gray{
-                background-color: $color-gray;
-            }
-            &_green{
-                background-color: $color-green;
-            }
-            &_red-gray{
-                background: linear-gradient(to bottom, $color-red 0%, $color-red 20%, $color-gray 20%, $color-gray 100%);
-            }
-            &_red-white{
-                background: linear-gradient(to bottom, $color-red 0%, $color-red 20%, $color-white 20%, $color-white 100%);
-            }
-        }       
-
-        &.--left { // for left page (property will be added automatically)
-            border-right: 0;
-            box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
-        }
-
-        &.--right { // for right page (property will be added automatically)
-            border-left: 0;
-            box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
-        }
-    }
-}
+                .bold{
+                    font-weight: 500;
+                }
 
 
+                .book-desc{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+                img {
+                    max-width: 100%;
+                height: auto;
+                display: block;
+                    // object-fit: contain;
+                    // width: 100%;
+                    // // max-height: auto;
+                    // // height: 70%;
+                    
+                } 
 
+                
 
+                figure {
+                    &.page1{
+                        margin-top: 0px;
+                        margin-bottom: 2em;
+                        height: 40%;
+                    img{
+                            object-fit: contain;
+                            // width: 100%;
+                            // max-height: auto;
+                            height: 100%;
+                            
+                        } 
+                        figcaption{
+                            color: $color-white;
+                            text-align: right;
+                            font-size: clamp(.5rem, $font-large, .75rem) ;
+                            text-transform: none;
+                            font-weight: normal;
+                        }
+                    }
+
+                    blockquote {
+                        font-size: $h4-font-size;
+                        font-style: italic;
+                        line-height: 1.5;
+                        // font-weight: 500;
+                        margin-bottom: .5rem;
+                        text-wrap: pretty;
+                        padding-top: clamp(.5rem, $font-large, .75rem) ; 
+                        padding-bottom: clamp(.5rem, $font-large, .75rem) ;
+                    }
+                    figcaption {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: $font-med;
+                    }
+
+                }
+                .page7 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-evenly;
+                    max-height: 100%;
+                    height: auto;
+                
+                    margin: 0;
+                    
+                    & img{
+                
+                        margin-top: 0;
+                        object-fit: contain;
+                        flex-grow: 1;
+                        flex-shrink: 2;
+                        flex-basis: auto;
+                        width: 100%;
+                        height: 70%;
+                        // min-width: 0;
+                        
+                        margin:0;
+                    }
+                }
+                
+                .page14 {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
+
+                    img{
+                        &:first-child {
+                            //  flex-shrink:0;
+                              flex-grow: 1;
+                            //    flex-basis: 0%;
+                        }
+                        &:last-child {
+                                // flex-shrink:0;
+                              flex-grow: 2;
+                            //    flex-basis: 0%;
+                        }
+                        
+                        margin-top: 0;
+                        object-fit: contain;
+                        width: auto;
+                        height: 100%;
+                        min-width: 0;
+                        
+                        margin:0;
+                    }
+                }
             
-    /* Controller Buttons */
-    button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        color: $color-white;
-        font-family: 'Avenir',  ff-scala-sans-pro, sans-serif;
-        margin: 0px; 
-    }
 
-    i {
-        padding-bottom: 5px;
-        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 3rem);
-        color: $color-white;
+                hr {
+                    border:1px solid $hr;
+                    margin-top: 2em;
+                    margin-bottom: 1em;
+                    width: 100%;
+                }
+
+
+                ol {
+                    list-style: none;
+                    counter-reset: list-number;
+                    padding: 0;
+
+                    li {
+                        &:before {
+                            counter-increment: list-number;
+                            content: counter(list-number);
+                            
+                            // margin-right: 10px;
+                            margin-bottom:clamp(.5rem,$font-large, .75rem) ;
+                            width:clamp(1.25rem,$font-large, 2.5rem) ;
+                            height:clamp(1.25rem,$font-large, 2.5rem) ;
+                            display:inline-flex;
+                            align-items:center;
+                            justify-content: center;
+                            font-size:clamp(.75rem,$font-large, 1.5rem) ;
+                            background-color: $color-red;
+                            border-radius:50%;
+                            color: $color-white;
+                        }
+                    }
+                }
+
+                .red-flag{
+                    padding: 3cqi; 
+                    position: absolute; 
+                    right: 0px; 
+                    left: 20cqi;
+                    bottom: 6cqi;
+                    font-size: $p-font-size;
+                    color: $color-white;
+                    background: $color-red;
+                }
+
+                .quote{
+                    position: absolute;
+                    right: 0px;
+                    padding-right: 10cqi;
+                    padding-left: $font-med;
+                    margin-left: 10cqi;
+                    margin-top: 20cqi;
+                    background: $color-gray
+                }
+            }
+            
+        }
     }
+    }
+    
+
 }
+      
+
+
 
 /*  
 *  Modal Content 
@@ -479,23 +490,6 @@ body {
     touch-action: none !important;
 }
 
-.home-btn {
-    display: block;
-    color: $color-white;
-    text-align: center;
-    font-family: $primary-font;
-    font-size: $primary-font-size;
-    margin-top: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
-    // top: 0px;
-    // width: 100%;
-    // padding-right: 20px;
-    // padding-bottom: 2rem;
-    position: relative;
 
-    .fas {
-    font-size: $primary-font-size;
-    }
-        
-}
 
 
