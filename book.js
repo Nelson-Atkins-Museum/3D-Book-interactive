@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageFlip = new St.PageFlip(
         document.getElementById("Book"),
         {
-            width: 550, // base page width
-            height: 733, // base page height
+            width: 600, // base page width
+            height: 800, // base page height
 
             size: "stretch",
             // set threshold values:
-            minWidth: 315,
+            minWidth: 325,
             maxWidth: 1200,
-            minHeight: 420,
+            minHeight: 400,
             maxHeight: 1200,
             
             flippingTime: 500,
