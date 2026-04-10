@@ -87,19 +87,28 @@ body header {
   align-content: center;
   justify-content: center;
   height: 20vh;
-  flex-grow: 1;
+  flex-shrink: 1;
 }
 body header img {
+  flex-shrink: 2;
   object-fit: contain;
-  height: 100%;
+  max-height: 100%;
+  width: 100%;
   margin: 0px;
   text-align: center;
+}
+body header div {
+  container-type: inline-size;
+  width: 100%;
+}
+body header div p {
+  margin: 0;
 }
 body nav { /* Controller Buttons */
   justify-content: space-between;
   align-items: bottom;
   height: 10vh;
-  flex: 1;
+  flex-shrink: 1;
 }
 body nav.row {
   padding-top: 0;
@@ -208,6 +217,19 @@ body main .container .page .page-content figure {
   margin-right: 0;
   margin-top: 0;
 }
+body main .container .page .page-content figure blockquote {
+  font-size: clamp(1rem, 6cqi, 2rem);
+  font-style: italic;
+  line-height: 1.25;
+  margin: 0;
+  text-wrap: pretty;
+  padding-bottom: clamp(0.5rem, 5cqi, 0.75rem);
+}
+body main .container .page .page-content figure figcaption {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1rem, 6cqi, 2rem);
+}
 body main .container .page .page-content figure img {
   object-fit: contain;
 }
@@ -226,31 +248,14 @@ body main .container .page .page-content figure.page1 figcaption {
   text-transform: none;
   font-weight: normal;
 }
-body main .container .page .page-content figure blockquote {
-  font-size: clamp(1rem, 6cqi, 2rem);
-  font-style: italic;
-  line-height: 1.25;
-  margin: 0;
-  text-wrap: pretty;
-  padding-bottom: clamp(0.5rem, 5cqi, 0.75rem);
-}
-body main .container .page .page-content figure figcaption {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: clamp(1rem, 6cqi, 2rem);
-}
-body main .container .page .page-content figure.page6 {
+body main .container .page .page-content figure.page6 a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
   max-height: 100%;
   height: auto;
-  margin: 0;
-}
-body main .container .page .page-content figure.page6 img {
-  width: 100%;
-  height: 70%;
+  margin: 0cqi 20cqi 0cqi 20cqi;
 }
 body main .container .page .page-content figure.quote {
   position: relative;
@@ -262,23 +267,23 @@ body main .container .page .page-content figure.quote {
 body main .container .page .page-content figure.quote h3 {
   padding-bottom: 4cqi;
 }
-body main .container .page .page-content .page14 {
+body main .container .page .page-content figure.page12 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
   gap: 1rem;
   width: auto;
-  padding: 0;
+  padding: 1rem 0px 2rem 0px;
   margin: clamp(-3.5rem, -12.5cqi, -1.5rem);
 }
-body main .container .page .page-content .page14 img:first-child {
+body main .container .page .page-content figure.page12 img:first-child {
   flex-grow: 1;
 }
-body main .container .page .page-content .page14 img:last-child {
+body main .container .page .page-content figure.page12 img:last-child {
   flex-grow: 2;
 }
-body main .container .page .page-content .page14 img {
+body main .container .page .page-content figure.page12 img {
   margin-top: 0;
   object-fit: contain;
   width: auto;
