@@ -423,6 +423,59 @@ body {
             }
         }
     }
+
+// Cookies
+    #cookies {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: $color-white;
+        display: none;
+        z-index: 1;
+
+        .cookie-container {
+            // background-color: #FFFFFF;
+            // border-color: #f4f4f4;
+            // background: #ffffff;
+            border: 1px solid;
+            padding: 16.5px 24px;
+            box-shadow: 0 -1px 10px 0 #acabab4d;
+        }
+        .cookies {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .btn-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 15px;
+            gap: .5em;
+            #cookies-btn {
+                color: #FFFFFF;
+                background-color: #000000;
+                border-color: #000000;
+                font-family: inherit;
+
+                &-reject{
+                color: #000000;
+                background-color: #FFFFFF ;
+                border-color: #000000;
+                font-family: inherit;
+                }
+            }
+        }
+        
+         // .cookies a {
+        // text-decoration: none;
+        // }
+          // #more-info-link {
+        // font-weight: 600;
+        // color: var(--color);
+        // }
+    } 
 }
       
 

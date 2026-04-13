@@ -6,8 +6,11 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="robots" content="noindex, follow">
+
     <title></title>
+
     <!-- Other head elements like CSS links, etc. -->
+
     <!-- Google tag (gtag.js) https://nelson-atkins.org -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9T0PZBCP7"></script>
     <script>
@@ -17,16 +20,20 @@
 
     gtag('config', 'G-D9T0PZBCP7');
     </script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/xyu4lmf.css">
+
     <script src="https://use.fontawesome.com/69e6e0bdba.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <script src="node_modules\page-flip\dist\js\page-flip.browser.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
     <!-- <script src="https://hammerjs.github.io/dist/hammer.js"></script> -->
-    <script src="./book.js" defer></script>
-    <script src="./hammer.js" defer></script>
-    <script src="./modal.js" defer></script>
+    <script src="./book.js"     defer></script>
+    <script src="./cookies.js"  defer></script>
+    <script src="./hammer.js"   defer></script>
+    <script src="./modal.js"    defer></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xyu4lmf.css">
+
 </head>
 <body>
     <header class="header row">
@@ -435,5 +442,19 @@
             <p>Next</p>
         </button>
     </nav>
+    <section id="cookies">
+        <div class="cookie-container">
+            <div class="cookies">
+                <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+                    <!-- <a href="" id="more-info-link">More info.</a> -->
+                </p>
+                <div class="btn-wrapper">
+                    <button id="cookies-btn-reject" style="padding: 8px 12px 8px 12px;">Reject All</button>
+                    <button id="cookies-btn" style="padding: 8px 12px 8px 12px;">Accept All</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 </body>
 </html>
