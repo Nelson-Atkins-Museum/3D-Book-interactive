@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             flippingTime: 500,
             swipeDistance: 30,
-//          disableFlipByClick: true,//false: turn page by clicking anywhere on page 
+         disableFlipByClick: true,//false: turn page by clicking anywhere on page 
             maxShadowOpacity: 0.5, // shadow intensity
             showCover: false, //false: keeps book open
             mobileScrollSupport:false,// disable content scrolling on mobile devices

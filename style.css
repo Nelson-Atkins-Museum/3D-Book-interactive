@@ -10,11 +10,11 @@ Variables
 }
 
 .lt-red {
-  color: #b78989;
+  color: #cc9999;
 }
 
 .red {
-  color: #701515;
+  color: #721816;
 }
 
 .green {
@@ -30,6 +30,7 @@ h2 {
   font-size: clamp(1rem, 6.5cqi, 2.125rem);
   margin-top: 0px;
   margin-bottom: 3cqi;
+  font-weight: 400;
 }
 
 h3 {
@@ -70,7 +71,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: radial-gradient(closest-side, #000000, #000000, #2c2c2c);
+  align-items: center;
+  align-content: center;
+  background: #2b6c70;
   overflow: hidden; /*hides scrollbars*/
 }
 body .row {
@@ -78,34 +81,30 @@ body .row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  container-type: inline-size;
   width: 100%;
   gap: clamp(1rem, 1rem + (1vw - 0.2rem) * 1.667, 2rem);
   padding: clamp(1rem, 1rem + (1vw - 0.2rem) * 1.667, 2rem);
 }
 body header {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
   height: 20vh;
   flex-shrink: 1;
+  width: 100%;
 }
 body header img {
   flex-shrink: 2;
   object-fit: contain;
   max-height: 100%;
-  width: 100%;
+  width: auto;
   margin: 0px;
-  text-align: center;
 }
-body header div {
-  container-type: inline-size;
-  width: 100%;
-}
-body header div p {
+body header p {
   margin: 0;
 }
 body nav { /* Controller Buttons */
-  justify-content: space-between;
   align-items: bottom;
   height: 10vh;
   flex-shrink: 1;
@@ -113,6 +112,7 @@ body nav { /* Controller Buttons */
 body nav.row {
   padding-top: 0;
   padding-bottom: 0;
+  gap: 10cqi;
 }
 body nav button {
   border: none;
@@ -149,7 +149,7 @@ body main .container .page-bkg {
   background-color: #FFFFFF;
 }
 body main .container .page-bkg_red {
-  background-color: #701515;
+  background-color: #721816;
 }
 body main .container .page-bkg_gray {
   background-color: #CFD8DA;
@@ -161,10 +161,10 @@ body main .container .page-bkg_green {
   background-color: #226C6F;
 }
 body main .container .page-bkg_red-gray {
-  background: linear-gradient(to bottom, #701515 0%, #701515 25%, #CFD8DA 25%, #CFD8DA 100%);
+  background: linear-gradient(to bottom, #721816 0%, #721816 25%, #CFD8DA 25%, #CFD8DA 100%);
 }
 body main .container .page-bkg_red-white {
-  background: linear-gradient(to bottom, #701515 0%, #701515 25%, #FFFFFF 25%, #FFFFFF 100%);
+  background: linear-gradient(to bottom, #721816 0%, #721816 25%, #FFFFFF 25%, #FFFFFF 100%);
 }
 body main .container .page.--left {
   border-right: 0;
@@ -317,7 +317,7 @@ body main .container .page .page-content ol li:before {
   align-items: center;
   justify-content: center;
   font-size: clamp(0.75rem, 4cqi, 1.5rem);
-  background-color: #701515;
+  background-color: #721816;
   border-radius: 50%;
   color: #FFFFFF;
 }
@@ -329,7 +329,7 @@ body main .container .page .page-content .red-flag {
   bottom: clamp(1.5rem, 10cqi, 3.5rem);
   font-size: clamp(0.75rem, 4cqi, 1.25rem);
   color: #FFFFFF;
-  background: #701515;
+  background: #721816;
 }
 body #cookies {
   width: 100%;

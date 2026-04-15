@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //get all the img elements
-    const myNodelist = document.querySelectorAll("img");
+    const img= document.getElementById("modalImg");
     
     // loop through img elements and assign hammer tap to each
-    for (let i = 0; i < myNodelist.length; i++) {
-      manager = new Hammer.Manager(myNodelist[i])
+
+      manager = new Hammer.Manager(img)
       manager.add(Tap);
       manager.on('tap', openModal);
-    }
+
 
     // displays modal, disables image from reloading on tap, fills modal 
     //image from target src and runs the pinch and zoom functionality from hammer.js
