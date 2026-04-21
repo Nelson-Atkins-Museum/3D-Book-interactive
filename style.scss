@@ -1,15 +1,23 @@
+@font-face {
+    font-family:'Pangram-Regular';
+    src: url('https://nelson-atkins.org/wp-content/themes/nama-azure/fonts/Pangram-Regular.eot'),
+		url('https://nelson-atkins.org/wp-content/themes/nama-azure/fonts/Pangram-Regular.woff2'),
+		url('https://nelson-atkins.org/wp-content/themes/nama-azure/fonts/Pangram-Regular.woff'),
+		url('https://nelson-atkins.org/wp-content/themes/nama-azure/fonts/Pangram-Regular.ttf');
+}
 /* 
 Variables 
 */
 $color-red          : #721816 /*#701515*/;
 $color-white        : #FFFFFF;
 $color-lt-gray        : #e9eced;
+$color-mid-gray     : #808080;
 $color-gray         : #CFD8DA;
 $color-dk-gray      : #67676a;
 $color-green        : #226C6F;
 $color-lt-green     : #2b6c70 /* #89b5b2*/;
 $color-lt-red       : #cc9999;
-$color-blk          : #231F20;
+$color-blk          : #000000;
 
 $hr                 : #b78989;
 $green-bar          : #ADC5C7;
@@ -21,10 +29,10 @@ $primary-font-size  : clamp(.75rem, .75rem + ((1vw - 0.2rem) * 1.667), 1rem);
 $h1-font-size  : clamp(1rem, 10cqi, 2.5rem); 
 $h2-font-size  : clamp(1rem, 6.5cqi,  2.125rem); 
 $h3-font-size  : clamp(1rem, 6cqi, 2.125rem); 
-$h4-font-size  : clamp(1rem, 6cqi, 2rem); 
+$h4-font-size  : clamp(1rem, 5cqi, 2rem); 
 $h5-font-size  : clamp(1rem, 5cqi, 1.75rem); 
 $h6-font-size  : clamp(1rem, 5cqi, 1.5rem); 
-$p-font-size   : clamp(.75rem, 4cqi, 1.25rem); 
+$p-font-size   : clamp(1rem, 4cqi, 1.25rem); 
 
 $page-font-size     : clamp(.75rem, 4cqi, 1rem); 
 $font-small         : 3.5cqi;
@@ -51,6 +59,7 @@ $font-large         : 5cqi;
 h1 {
     font-size: $h1-font-size ;
     margin-bottom: 2cqi;
+    font-weight: 500;
 }
 h2 {
     font-size: $h2-font-size ;
@@ -61,6 +70,7 @@ h2 {
 h3 {
     font-size: $h3-font-size ;
     margin-bottom: 1cqi;
+    font-weight: 400;
 }
 h4 {
     font-size: $h4-font-size ;
@@ -76,8 +86,20 @@ p {
     
     margin-bottom: 2cqi;
 }
+cite{
+    font-weight: bold;
+}
+button{
+    font-family: $primary-font;
+}
 
-
+#loading-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: $color-mid-gray;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 9999;
+}
 
 
 :root{
@@ -92,6 +114,7 @@ p {
 }
 
 body {
+    font-family: $primary-font;
     height: 100vh;
     position: relative;
     display: flex;
@@ -100,7 +123,7 @@ body {
     align-items: center;
     align-content: center;
 
-    background: $color-lt-green;
+    background: $color-mid-gray;
     
     overflow: hidden; /*hides scrollbars*/
     // overflow-y: auto;
@@ -110,10 +133,10 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-          justify-content: center;
-    align-items: center;
-    align-content: center;
-    container-type: inline-size;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        container-type: inline-size;
         
         width: 100%;
         gap: clamp(1rem, 1rem + ((1vw - 0.2rem) * 1.667), 2rem); 
@@ -122,23 +145,38 @@ body {
     
 
     header {
-        // align-items: center;
-        //align-content: center;
-        //justify-content: right;
         height: 20vh;
         flex-shrink:1;
-        width: 100%;
 
-        & img {
-            flex-shrink: 2;
-            object-fit: contain;
-            max-height: 100%;
-            width: auto;
-            margin: 0px;
-            //text-align: right;
+        &.row {
+            figure{
+                flex-shrink: 2;
+                height: 100%;
+                padding-bottom: $p-font-size;
+                text-align: center;
+                figcaption {
+                    //  container-type: inline-size;
+                     p {font-size: $page-font-size;}
+                    
+                }
+                img {
+                    object-fit: contain;
+                    max-height: 100%;
+                    width: auto;
+                    
+                }
+            } 
+            div {
+                // container-type: inline-size;
+                align-content: center;
+               height: 100%;
+            //    flex-shrink: 2;
+            //    flex-grow: 1;
+            }
         }
         & p {
             margin: 0;
+            font-size: $page-font-size;
         }
         
     }
@@ -154,10 +192,11 @@ body {
             gap: 10cqi;
         }
         button {
+            font-family: $primary-font;
             border: none;
             background-color: transparent;
             cursor: pointer;
-            color: $color-white;
+            color: $color-blk;
            
             p { 
                 margin: 0px; 
@@ -186,7 +225,6 @@ body {
         
             .page {
                 container-type: inline-size;
-                // padding: clamp(2rem, 4cqi, 4rem); 
                
                 &-bkg {
                     background-color: $color-white;
@@ -227,7 +265,7 @@ body {
                     display: flex;
                     flex-direction: column;
                     container-type: inline-size;
-                    padding: clamp(1.5rem, 10cqi, 3.5rem); 
+                    padding: clamp(1.5rem, 7cqi, 3.5rem); 
 
                     &.space-between{
                          justify-content: space-between;
@@ -256,21 +294,27 @@ body {
                         }
                     }
 
-                    .bold{
-                        font-weight: 500;
-                    }
-
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                        display: block;    
-                    } 
-
                     figure {
                         margin-left: 0;
                         margin-right: 0;
-                         margin-top: 0;
-                        //  width: 100%;
+                        margin-top: 0;
+                        width: 100%;
+
+                        &.img-w-cap{
+                            text-align: center;
+                            img{
+                                object-fit: contain;
+                                max-width: 100%;
+                                height: auto; 
+                            } 
+                            figcaption{
+                                color: $color-white;
+                                text-align: right;
+                                font-size: clamp(.5rem, $font-med, .75rem) ;
+                                text-transform: none;
+                                font-weight: normal;
+                            }
+                        }
                         blockquote {
                             font-size: $h4-font-size;
                             font-style: italic;
@@ -285,49 +329,14 @@ body {
                             font-weight: 500;
                             font-size: $h4-font-size;
                         }
-                        img{
-                            object-fit: contain;
-                        }
 
-                        &.page1{
-                            margin-bottom: 2em;
-                            height: 40%;
-
-                            img{
-                                object-fit: contain;
-                                height: 100%;
-                            } 
-                            figcaption{
-                                color: $color-white;
-                                text-align: right;
-                                font-size: clamp(.5rem, $font-med, .75rem) ;
-                                text-transform: none;
-                                font-weight: normal;
-                            }
-                        }
-
-                        &.page6 {
-                            
-                            & a {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: flex-start;
-                                justify-content: space-evenly;
-                                max-height: 100%;
-                                height: auto;
-                            
-                            
-                                margin: 0cqi 20cqi 0cqi 20cqi;
-                                & img{
-                                    
-                                }
-                            }
-                        }
 
                         &.quote{
+                            width: 105%;
+                            box-sizing: border-box;
                             position: relative;
-                            margin-right: clamp(-3.5rem,-12.5cqi, -1.5rem); 
-                            margin-left:clamp(-1.75rem,-6cqi, -.75rem);
+                            margin-right: 0; 
+                            margin-left: clamp(2rem, 10cqi, 3.5rem);
                             padding: $font-med;
                             background: $color-lt-gray;
                             h3{
@@ -340,10 +349,10 @@ body {
                             flex-direction: row;
                             align-items: flex-start;
                             justify-content: space-evenly;
-                            gap: 1rem;
-                            width: auto;
+                            
+                            width: 105%;
                             padding: 1rem 0px 2rem 0px;
-                            margin:  clamp(-3.5rem,-12.5cqi, -1.5rem); 
+                            margin:  clamp(-2.5rem,-10cqi, -1.5rem); 
 
                             img{
                                 &:first-child {
@@ -369,7 +378,11 @@ body {
                     }
 
                   
-                    
+                    .img {
+                        max-width: 100%;
+                        height: auto;
+                        display: block;    
+                    } 
                     
                 
 
@@ -501,7 +514,7 @@ body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgb(0,0,0,.5); /* Fallback color */
     /* background-color: rgba(0,0,0,0.9); Black w/ opacity */
     overflow: hidden;
 }
@@ -511,7 +524,7 @@ body {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #e5d1b9;
+    color: $color-white;
     font-size: 80px;
     font-weight: bold;
     transition: 0.3s;
@@ -519,6 +532,7 @@ body {
 
 /*Modal Zoom in btn*/
 .zoom {
+    font-family: $primary-font;
     position: absolute;
     top: 30px;
     left: 35px;

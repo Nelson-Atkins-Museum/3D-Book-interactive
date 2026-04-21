@@ -1,3 +1,8 @@
+window.addEventListener('load', function() {
+  const overlay = document.getElementById('loading-overlay');
+  overlay.style.display = 'none';
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const pageFlip = new St.PageFlip(
@@ -8,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             size: "stretch",
             // set threshold values:
-            minWidth: 325,
+            minWidth: 450,
             maxWidth: 1200,
-            minHeight: 400,
+            minHeight: 450,
             maxHeight: 1200,
             
             flippingTime: 500,
             swipeDistance: 30,
-         disableFlipByClick: true,//false: turn page by clicking anywhere on page 
+            //disableFlipByClick: true,//false: turn page by clicking anywhere on page 
             maxShadowOpacity: 0.5, // shadow intensity
             showCover: false, //false: keeps book open
             mobileScrollSupport:false,// disable content scrolling on mobile devices
