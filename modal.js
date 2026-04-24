@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function openModal(e){
         modal.style.display = "block";
         modalImg.style.pointerEvents = "none";
-        modalImg.src = e.target.src;
+        modalImg.src = `${e.target.src}.modal.jpg`;
+        modalImg.alt = e.target.alt;
         viewImg();
     }
 });

@@ -66,7 +66,7 @@ cite {
 }
 
 button {
-  font-family: "Pangram", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
 }
 
 #loading-overlay {
@@ -83,7 +83,7 @@ button {
 }
 
 :root {
-  font-family: "Pangram", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
 }
 
 * {
@@ -93,7 +93,7 @@ button {
 }
 
 body {
-  font-family: "Pangram", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
   height: 100vh;
   position: relative;
   display: flex;
@@ -102,7 +102,7 @@ body {
   align-items: center;
   align-content: center;
   background: #808080;
-  overflow: hidden; /*hides scrollbars*/
+  overflow-x: hidden;
 }
 body .row {
   position: relative;
@@ -152,9 +152,10 @@ body nav.row {
   padding-top: 0;
   padding-bottom: 0;
   gap: 10cqi;
+  align-items: flex-start;
 }
 body nav button {
-  font-family: "Pangram", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -167,9 +168,6 @@ body nav button i {
   padding-bottom: 5px;
   font-size: clamp(1rem, 6cqi, 2.125rem);
   margin: 0;
-}
-body nav button .home-btn {
-  align-items: bottom;
 }
 body {
   /* Book */
@@ -204,7 +202,7 @@ body main .container .page-bkg_red-gray {
   background: linear-gradient(to bottom, #721816 0%, #721816 25%, #CFD8DA 25%, #CFD8DA 100%);
 }
 body main .container .page-bkg_red-white {
-  background: linear-gradient(to bottom, #721816 0%, #721816 25%, #FFFFFF 25%, #FFFFFF 100%);
+  background: linear-gradient(to bottom, #721816 0%, #721816 20%, #FFFFFF 20%, #FFFFFF 100%);
 }
 body main .container .page.--left {
   border-right: 0;
@@ -244,6 +242,16 @@ body main .container .page .page-content .font__med {
 body main .container .page .page-content .font__large {
   font-size: 5cqi;
 }
+body main .container .page .page-content .button-link {
+  display: inline-block; /* Essential to treat as a block for padding */
+  padding: 10px 20px;
+  background-color: #226C6F;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 0px;
+  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  transition: background-color 0.3s;
+}
 body main .container .page .page-content figure {
   margin-left: 0;
   margin-right: 0;
@@ -264,6 +272,9 @@ body main .container .page .page-content figure.img-w-cap figcaption {
   font-size: clamp(0.5rem, 4cqi, 0.75rem);
   text-transform: none;
   font-weight: normal;
+}
+body main .container .page .page-content figure.img-w-cap a figcaption {
+  color: #000000;
 }
 body main .container .page .page-content figure blockquote {
   font-size: clamp(1rem, 5cqi, 2rem);
@@ -293,11 +304,10 @@ body main .container .page .page-content figure.quote h3 {
 body main .container .page .page-content figure.page12 {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
-  width: 105%;
-  padding: 1rem 0px 2rem 0px;
-  margin: clamp(-2.5rem, -10cqi, -1.5rem);
+  gap: 2cqi;
+  width: 100%;
 }
 body main .container .page .page-content figure.page12 img:first-child {
   flex-grow: 1;
@@ -306,7 +316,6 @@ body main .container .page .page-content figure.page12 img:last-child {
   flex-grow: 2;
 }
 body main .container .page .page-content figure.page12 img {
-  margin-top: 0;
   object-fit: contain;
   width: auto;
   height: 100%;
@@ -317,6 +326,7 @@ body main .container .page .page-content .img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 body main .container .page .page-content hr {
   border: 0.5px solid #b78989;
@@ -411,13 +421,10 @@ body #cookies .btn-wrapper #cookies-btn-reject {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.5); /* Fallback color */
-  /* background-color: rgba(0,0,0,0.9); Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.9);
   overflow: hidden;
 }
 
@@ -434,7 +441,7 @@ body #cookies .btn-wrapper #cookies-btn-reject {
 
 /*Modal Zoom in btn*/
 .zoom {
-  font-family: "Pangram", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
   position: absolute;
   top: 30px;
   left: 35px;
@@ -444,7 +451,7 @@ body #cookies .btn-wrapper #cookies-btn-reject {
 }
 
 .zoom-btn {
-  font-size: 40px;
+  font-size: clamp(1rem, 10cqi, 2.5rem);
   font-weight: bold;
   padding-left: 15px;
 }
@@ -455,6 +462,9 @@ body #cookies .btn-wrapper #cookies-btn-reject {
   height: 90%;
   width: 70%;
   touch-action: none !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pinch-zoom-image {
