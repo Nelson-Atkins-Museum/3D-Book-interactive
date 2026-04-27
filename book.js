@@ -1,9 +1,23 @@
-window.addEventListener('load', function() {
-  const overlay = document.getElementById('loading-overlay');
-  overlay.style.display = 'none';
-});
+// window.addEventListener('load', function() {
+//   const overlay = document.getElementById('loading-overlay');
+//   overlay.style.display = 'none';
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('#Book img');
+    // console.log(images)
+    let index = 0;
+
+    function loadNext(element) {
+        if (index < element.length) {
+            element[index].onload = loadNext; // Load next when current finishes
+            index++;
+        }
+    }
+
+    loadNext(images);
+
+
 
     const pageFlip = new St.PageFlip(
         document.getElementById("Book"),
@@ -20,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             flippingTime: 500,
             swipeDistance: 30,
-            //disableFlipByClick: true,//false: turn page by clicking anywhere on page 
+            disableFlipByClick: true,//false: turn page by clicking anywhere on page 
             maxShadowOpacity: 0.5, // shadow intensity
             showCover: false, //false: keeps book open
             mobileScrollSupport:false,// disable content scrolling on mobile devices
@@ -39,8 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(".btn-prev").addEventListener("click", () => {
         if (pageFlip.getOrientation() == 'portrait') {
             pageFlip.turnToPrevPage();
+            console.log("flip back portrait")
         } else {
+            pageFlip.turnToPrevPage();
             pageFlip.flipPrev(); // Turn to the previous page (with animation)
+            console.log("flip back")
         }
     });
 
@@ -57,8 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
     close.addEventListener("click", closeBook);
 
     function closeBook(){
+        let count = 0;
         while(document.querySelector(".page-current").innerText > 1){
-        pageFlip.flipPrev();
+         pageFlip.turnToPrevPage();
         }
     }
 

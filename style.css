@@ -441,23 +441,29 @@ body #cookies .btn-wrapper #cookies-btn-reject {
 
 /*Modal Zoom in btn*/
 .zoom {
+  container-type: inline-size;
   font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
   position: absolute;
   top: 30px;
   left: 35px;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(0.75rem, 4cqi, 1rem);
   color: #e5d1b9;
   transition: 0.3s;
   padding: 30;
 }
 
 .zoom-btn {
-  font-size: clamp(1rem, 10cqi, 2.5rem);
+  font-size: clamp(1rem, 6.5cqi, 2.125rem);
   font-weight: bold;
-  padding-left: 15px;
+  padding: clamp(0.75rem, 4cqi, 1rem);
+  text-wrap: nowrap;
 }
 
 /* Modal content Image */
 .pinch-zoom-container {
+  position: relative;
   overflow: hidden;
   height: 90%;
   width: 70%;

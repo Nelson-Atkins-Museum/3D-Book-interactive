@@ -167,7 +167,9 @@ var viewImg = function () {
   disableImgEventHandlers();
 
   imgWidth = modalImg.width;
-  imgHeight = modalImg.height;
+  // imgHeight = modalImg.height;
+  // imgHeight = modalImg.onload.naturalHeight;
+  imgHeight= modalImg.onload = ()=>{modalImg.style.height = modalImg.height};
   viewportWidth =modalImg.parentElement.offsetWidth;
   scale = viewportWidth/imgWidth;
   lastScale = scale;

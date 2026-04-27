@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content=" width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="robots" content="noindex, follow">
 
     <title>Exhausted Renegade Elephant Interactive Book | Nelson-Atkins Museum of Art</title>
@@ -12,14 +12,16 @@
     <!-- Other head elements like CSS links, etc. -->
 
     <!-- Google tag (gtag.js) https://nelson-atkins.org -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9T0PZBCP7"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9T0PZBCP7"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-D9T0PZBCP7');
-    </script>
+    </script> -->
+
+       <link rel="preload" as="image" href="Img\2022-25-11_Sternfeld-ExhaustedRenegadeElephant.jpg.modal.jpg" fetchpriority="high">
 
     <script src="https://use.fontawesome.com/69e6e0bdba.js"></script>
     <script src="node_modules\page-flip\dist\js\page-flip.browser.js"></script>
@@ -30,9 +32,14 @@
     <script src="./hammer.js"   defer></script>
     <script src="./modal.js"    defer></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="./style.css">
+     <link rel="preload"  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" as="style">
+    <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="preload" href="https://use.typekit.net/xyu4lmf.css" as="style">
     <link rel="stylesheet" href="https://use.typekit.net/xyu4lmf.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+   
 
 </head>
 <body>
@@ -53,7 +60,13 @@
             
             <!-- Modal Content (The Image) -->
             <div class="pinch-zoom-container" >
-                <img id="pinch-zoom-image-id" class="pinch-zoom-image"  alt="A landscape photograph of an elephant collapsed in the middle of a road in the woods. At center, several people and two trucks surround the elephant. At bottom right, a person sits in a white sheriff’s car with the driver’s side door open.  "
+                <img  id="pinch-zoom-image-id" 
+                class="pinch-zoom-image"  
+                src="Img\2022-25-11_Sternfeld-ExhaustedRenegadeElephant.jpg.modal.jpg"
+
+               
+               
+                alt="A landscape photograph of an elephant collapsed in the middle of a road in the woods. At center, several people and two trucks surround the elephant. At bottom right, a person sits in a white sheriff’s car with the driver’s side door open.  "
 >
             </div>
         
@@ -62,7 +75,7 @@
         </div>
     <header class="header row">
         <figure class="img-w-cap">
-             <img  id="modalImg"
+             <img  loading="eager"   id="modalImg"
                 src="Img\2022-25-11_Sternfeld-ExhaustedRenegadeElephant.jpg" 
                 alt="A landscape photograph of an elephant collapsed in the middle of a road in the woods. At center, several people and two trucks surround the elephant. At bottom right, a person sits in a white sheriff’s car with the driver’s side door open.  "
                 >
@@ -94,10 +107,10 @@
         <!-- cover -->
                 <div class="page page-bkg" >
                     <div class="page-content space-between">
-                        <img 
+                        <img  loading="eager" 
                         class="img"
                             src="Img\Dig Flipbook_AP_Title.png"
-                            alt="American Prospects & Landscape Photography 1839-today July 5, 2026 - Jan 3, 2027"
+                            alt="An exhibition title header that reads “American Prospects & Landscape Photography, 1839 to today.” Below, the exhibition dates read July 5, 2026 through January 3, 2027.“ "
                         >
                         <h1>Interactive Book</h1>
                         <p class="font__small">
@@ -115,7 +128,8 @@
                 <div class="page page-bkg_red" >
                     <div class="page-content space-between">
                         <figure class="img-w-cap">
-                            <img  
+                            <img  loading="eager" 
+                            
                                 src="Img\Page 1_Sternfeld.jpg" 
                                 alt="
                                 A black and white photograph of young Joel Sternfeld taking a photograph outside using a large-format camera on a tripod.
