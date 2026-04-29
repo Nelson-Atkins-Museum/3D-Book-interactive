@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-        const overlay = document.getElementById('loading-overlay');
+  const overlay = document.getElementById('loading-overlay');
   overlay.style.display = 'none';
 
 

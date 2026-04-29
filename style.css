@@ -66,7 +66,7 @@ cite {
 }
 
 button {
-  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", sans-serif;
 }
 
 #loading-overlay {
@@ -83,7 +83,7 @@ button {
 }
 
 :root {
-  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", sans-serif;
 }
 
 * {
@@ -93,7 +93,7 @@ button {
 }
 
 body {
-  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", sans-serif;
   height: 100vh;
   position: relative;
   display: flex;
@@ -155,7 +155,7 @@ body nav.row {
   align-items: flex-start;
 }
 body nav button {
-  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", sans-serif;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -249,7 +249,7 @@ body main .container .page .page-content .button-link {
   color: #FFFFFF;
   text-align: center;
   border-radius: 0px;
-  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", sans-serif;
   transition: background-color 0.3s;
 }
 body main .container .page .page-content figure {
@@ -368,44 +368,6 @@ body main .container .page .page-content .red-flag {
   color: #FFFFFF;
   background: #721816;
 }
-body #cookies {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: #FFFFFF;
-  display: none;
-  z-index: 1;
-}
-body #cookies .cookie-container {
-  border: 1px solid;
-  padding: 16.5px 24px;
-  box-shadow: 0 -1px 10px 0 rgba(172, 171, 171, 0.3019607843);
-}
-body #cookies .cookies {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-body #cookies .btn-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15px;
-  gap: 0.5em;
-}
-body #cookies .btn-wrapper #cookies-btn {
-  color: #FFFFFF;
-  background-color: #000000;
-  border-color: #000000;
-  font-family: inherit;
-}
-body #cookies .btn-wrapper #cookies-btn-reject {
-  color: #000000;
-  background-color: #FFFFFF;
-  border-color: #000000;
-  font-family: inherit;
-}
 
 /*  
 *  Modal Content 
@@ -442,7 +404,7 @@ body #cookies .btn-wrapper #cookies-btn-reject {
 /*Modal Zoom in btn*/
 .zoom {
   container-type: inline-size;
-  font-family: "Pangram-Regular", "Avenir", ff-scala-sans-pro, sans-serif;
+  font-family: "Pangram-Regular", sans-serif;
   position: absolute;
   top: 30px;
   left: 35px;
