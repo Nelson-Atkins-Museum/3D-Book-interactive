@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             flippingTime: 500,
             swipeDistance: 30,
-            disableFlipByClick: true,//false: turn page by clicking anywhere on page 
+            // disableFlipByClick: true,//false: turn page by clicking anywhere on page 
             maxShadowOpacity: 0.5, // shadow intensity
             showCover: false, //false: keeps book open
             mobileScrollSupport:false,// disable content scrolling on mobile devices
@@ -53,11 +53,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(".btn-prev").addEventListener("click", () => {
         if (pageFlip.getOrientation() == 'portrait') {
             pageFlip.turnToPrevPage();
-            console.log("flip back portrait")
-        } else {
-            pageFlip.turnToPrevPage();
+            //console.log("flip back ", pageFlip.getOrientation())
+        } 
+        if (pageFlip.getOrientation() == 'landscape'){
             pageFlip.flipPrev(); // Turn to the previous page (with animation)
-            console.log("flip back")
+           
+            //console.log("flip back", pageFlip.getOrientation(),pageFlip.getBoundsRect())
         }
     });
 
