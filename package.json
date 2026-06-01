@@ -4,8 +4,7 @@
     "sass": "^1.97.3"
   },
   "scripts": {
-    "start" : "sass --watch style.scss style.css ",
-    "build" : "sass style.scss style.css "
-
+    "start": "sass --watch style.scss style.css ",
+    "build": "sass style.scss style.css "
   }
 }
