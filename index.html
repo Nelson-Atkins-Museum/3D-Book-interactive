@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Explore the Silver Horn Book of Drawings</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xyu4lmf.css">
+    <script src="https://use.fontawesome.com/69e6e0bdba.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!-- Flip book -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+    <!-- Zoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+    <!-- <script src="https://hammerjs.github.io/dist/hammer.js"></script> -->
+    <script src="./book.js" defer></script>
+    <script src="./hammer.js" defer></script>
+    <script src="./modal.js" defer></script>
+</head>
+<body>
+    
+    <!-- Previous Button -->
+    <button type="button" class="btn-prev" id="prev-btn" >
+        <i class="fas fa-chevron-left"></i>
+        <p>Previous</p>
+    </button>  
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">
+           &times;
+        </span>
+        
+        <div class="zoom">
+            <button class="zoom-btn" id="zoomIn" onclick="zoomIn()">Zoom In</button>
+            <button class="zoom-btn" id="zoomOut" onclick="zoomOut()">Zoom Out</button>
+        </div>
+        
+        <!-- Modal Content (The Image) -->
+        <div class="pinch-zoom-container" >
+            <img id="pinch-zoom-image-id" class="pinch-zoom-image">
+        </div>
+    
+        <!-- Modal Caption (Image Text) -->
+        <!-- <div id="mod-caption" ></div> -->
+    </div>
+
+
+    <div class="container hidden">
+        <div id="flip-book-1" class="flip-book closed"></div>
+
+         <div id="flip-book-2" class="flip-book closed"></div>
+
+          <div id="flip-book-3" class="flip-book closed"></div>
+   </div>
+
+
+
+    <!-- turnpage book     -->
+    <!-- <div class="container hidden"> -->
+        <!-- <div id="flip-book" class="flip-book" > -->
+            <!-- generate pages -->
+        <!-- </div> -->
+    <!-- </div> -->
+
+    
+
+    <!-- Next Button -->
+    <button type="button" class="btn-next" id="next-btn">
+        <i class="fas fa-chevron-right"></i>
+        <p>Next</p>
+    </button>
+
+    <div class="home-btn">
+        <button id="home-btn" >
+            <i class="fas fa-book"></i>
+            <br>
+            <p>Close Book</p>
+            <p>[<span class="page-current">1</span> of <span class="page-total">-</span>]</p>
+        </button>
+        <div style=" display: none; visibility: hidden;">
+            State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+        </div>
+    </div> 
+    <!-- footer-->
+    <div class="footer">
+    </div>
+
+</body>
+</html>
