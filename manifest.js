@@ -1,0 +1,80 @@
+const books =  [
+  {
+    id: "book1",
+    pages:[ 
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel04.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel05.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel06.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel07.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel08.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel09.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel10.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel11.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel12.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel13.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel14.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel15.jpg'" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel16.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel17.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel18.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel19.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel20.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel21.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel22.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel23.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel25.jpg" , "imgAlt": "Welcome to the interactive digital book!"}
+        ]
+  },
+  {
+    id: "book2",
+    pages: [ 
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel04.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel05.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel06.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel07.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel08.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel09.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel10.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel11.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel12.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel13.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel14.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel15.jpg'" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel16.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel17.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel18.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel19.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel20.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel21.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel22.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel23.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel25.jpg" , "imgAlt": "Welcome to the interactive digital book!"}
+        ]
+  },
+  {
+    id: "book3",
+    pages: [ 
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel04.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel05.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel06.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel07.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel08.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel09.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel10.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel11.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel12.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel13.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel14.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel15.jpg'" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel16.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel17.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel18.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel19.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel20.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel21.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel22.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel23.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
+            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel25.jpg" , "imgAlt": "Welcome to the interactive digital book!"}
+        ]
+  }
+];

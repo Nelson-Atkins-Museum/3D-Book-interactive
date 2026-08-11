@@ -78,13 +78,13 @@ body {
 pointer-events: none;
     }
 }
-.closed#flip-book-1{
+.closed#book1{
    transform: translateX(-40em) rotate(20deg) scale(0.5) !important;
 }
-.closed#flip-book-2{
+.closed#book2{
     transform: translateX(0px) rotate(20deg) scale(0.5) !important;
 }
-.closed#flip-book-3{
+.closed#book3{
       transform: translateX(40em) rotate(20deg) scale(0.5) !important;
 }
 .opened.flip-book {
