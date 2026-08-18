@@ -2,7 +2,6 @@ const books =  [
   {
     id: "book1",
     pages:[ 
-            {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel04.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
             {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel05.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
             {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel06.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
             {  "imgId": "" , "imgSrc": "./Img/book-1/UT_9_5_4_Hay_h_no1_panel07.jpg" , "imgAlt": "Welcome to the interactive digital book!"},
@@ -78,3 +77,4 @@ const books =  [
         ]
   }
 ];
+
