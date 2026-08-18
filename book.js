@@ -72,7 +72,7 @@ function createBook(bookData) {
     );
 
     document.addEventListener('DOMContentLoaded', function() {
-           console.log("loaded")
+        console.log("loaded")
 
         console.log( document.getElementById(`btn-prev-${bookData.id}`))
         document.getElementById(`prev-btn-${bookData.id}`).addEventListener("click", () => {
@@ -115,6 +115,7 @@ function createBook(bookData) {
             }
         });
     });
+    
     return pageFlip;
 }
 
