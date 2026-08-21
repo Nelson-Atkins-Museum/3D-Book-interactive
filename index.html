@@ -15,17 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
     <!-- Zoom -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
-    <!-- <script src="https://hammerjs.github.io/dist/hammer.js"></script> -->
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
      <script src="./manifest.js"></script>
     <script src="./book.js" defer></script>
     <script src="./hammer.js" defer></script>
     <script src="./modal.js" defer></script>
-
 </head>
 <body>
-    
-    <div class="btn-prev"></div>
-  
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <!-- The Close Button -->
@@ -45,26 +41,42 @@
     
         <!-- Modal Caption (Image Text) -->
         <!-- <div id="mod-caption" ></div> -->
+    </div> 
+    
+    <div class="btn-prev">
+        <!-- Previous Button -->
+        <button type="button" class="btn-prev hidden" id="prev-btn" >
+            <i class="fas fa-chevron-left"></i>
+            <p>Previous</p>
+        </button>
     </div>
 
     <!-- Book container -->
+    <div class="overlay hidden" id="overlay"></div>
     <div class="container"></div>
 
+    <div class="btn-next">
+         <!-- Next Button -->
+        <button type="button" class="btn-next hidden" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+            <p>Next</p>
+        </button>
+    </div>
 
-
-    <!-- turnpage book     -->
-    <!-- <div class="container hidden"> -->
-        <!-- <div id="flip-book" class="flip-book" > -->
-            <!-- generate pages -->
-        <!-- </div> -->
-    <!-- </div> -->
-
-    <div class="btn-next"></div>
-
-    <div class="home-btn"></div> 
+    <div class="home-btn hidden">
+         <button id="home-btn">
+            <i class="fas fa-book"></i>
+            <br>
+            <p>Close Book</p>
+            <p>[<span class="page-current" id="page-current">1</span> of <span class="page-total" id="page-total">-</span>]</p>
+        </button>
+        <div>
+            State: <i class="page-state" id="page-state">read</i>, orientation: <i class="page-orientation" id="page-orientation">landscape</i>
+        </div>
+    </div> 
 
     <!-- footer-->
     <div class="footer"></div>
-
+     
 </body>
 </html>
