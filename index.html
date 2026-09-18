@@ -42,41 +42,43 @@
         <!-- Modal Caption (Image Text) -->
         <!-- <div id="mod-caption" ></div> -->
     </div> 
-    
-    <div class="btn-prev">
-        <!-- Previous Button -->
-        <button type="button" class="btn-prev hidden" id="prev-btn" >
-            <i class="fas fa-chevron-left"></i>
-            <p>Previous</p>
-        </button>
-    </div>
-
-    <!-- Book container -->
-    <div class="overlay hidden" id="overlay"></div>
-    <div class="container"></div>
-
-    <div class="btn-next">
-         <!-- Next Button -->
-        <button type="button" class="btn-next hidden" id="next-btn">
-            <i class="fas fa-chevron-right"></i>
-            <p>Next</p>
-        </button>
-    </div>
-
-    <div class="home-btn hidden">
-         <button id="home-btn">
-            <i class="fas fa-book"></i>
-            <br>
-            <p>Close Book</p>
-            <p>[<span class="page-current" id="page-current">1</span> of <span class="page-total" id="page-total">-</span>]</p>
-        </button>
-        <div>
-            State: <i class="page-state" id="page-state">read</i>, orientation: <i class="page-orientation" id="page-orientation">landscape</i>
+    <main> 
+        <div class="btn-prev">
+            <!-- Previous Button -->
+            <button type="button" class="btn-prev hidden" id="prev-btn" >
+                <i class="fas fa-chevron-left"></i>
+                <p>Previous</p>
+            </button>
         </div>
-    </div> 
+
+        <!-- Book container -->
+        <div class="overlay hidden" id="overlay"></div>
+        <div class="container"></div>
+
+        <div class="btn-next">
+            <!-- Next Button -->
+            <button type="button" class="btn-next hidden" id="next-btn">
+                <i class="fas fa-chevron-right"></i>
+                <p>Next</p>
+            </button>
+        </div>
+
+        <div class="home-btn hidden">
+            <button id="home-btn">
+                <i class="fas fa-book"></i>
+                <br>
+                <p>Close Book</p>
+                <p>[<span class="page-current" id="page-current">1</span> of <span class="page-total" id="page-total">-</span>]</p>
+            </button>
+            <div class="hidden">
+                State: <i class="page-state" id="page-state">read</i>, orientation: <i class="page-orientation" id="page-orientation">landscape</i>
+            </div>
+        </div> 
+    </main>
+   
 
     <!-- footer-->
-    <div class="footer"></div>
+    <footer class="footer"></footer>
      
 </body>
 </html>
