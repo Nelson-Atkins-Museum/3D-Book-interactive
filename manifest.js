@@ -103,15 +103,15 @@ const books =  [
               }}
         ],
         settings: {
-            width:831, // base page width
-            height:1000, // base page height
+            width:415, // base page width
+            height:500, // base page height
             usePortrait: false,
-            // minWidth: 200, 
-            // maxWidth: 1000, 
-            // minHeight: 200, 
-            // maxHeight: 1000,
+            minWidth: 200, 
+            maxWidth: 1000, 
+            minHeight: 200, 
+            maxHeight: 1000,
 
-            // size: "stretch",
+            size: "stretch",
             
             // flippingTime: 500,
             // swipeDistance: 30,

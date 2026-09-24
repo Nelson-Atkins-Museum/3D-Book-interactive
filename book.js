@@ -4,6 +4,8 @@ const pageFlips     = {};
 books.forEach(book => {
     generatePages(book);
     pageFlips[book.id] = createBook(book);
+    preloadPages(book.id, 0, 2)
+    
 });
 
 bookContainer.classList.remove("hidden");
@@ -20,11 +22,13 @@ let pageState       = document.getElementById(`page-state`)
 let pageOrientation = document.getElementById(`page-orientation`)
 let pageTotal       = document.getElementById(`page-total`)
 
-let footer          = document.querySelector('.footer')
 let langToggle      = document.getElementById(`langToggle`)
 
-let language  = 'en';
+let selectedLanguage = 'en';
+let leftPage        = document.getElementById(`leftpage`)
+let rightPage       = document.getElementById(`rightpage`)
 let activeBook      = null;
+let activeBookID    = null;
 
 //Event Listeners
 bookContainer.addEventListener('click', (e) => {
@@ -38,14 +42,23 @@ bookContainer.addEventListener('click', (e) => {
             setOpenActiveBook(book)
             showControls()
 
-            footer.innerHTML = `<p>${transcription(language, book)}</p>`
-           
-         //update state of book
+            activeBookID = book.id
+             
+            preloadPages(activeBookID, 0);
+
+            translation(selectedLanguage, currentPage.innerText-1)
+            
+            //update state of book
             activeBook.on("flip", e => {
+                //preload images
+                preloadPages(activeBookID, e.data);
+
                 // triggered by page turning
                 currentPage.innerText = e.data + 1;
-                //transcriptions ???
-                footer.innerHTML = `<p>${transcription(language, book, e.data)}</p>`
+                
+                //translations translations
+                translation(selectedLanguage, e.data)
+
             });
 
             activeBook.on("changeState", e => {
@@ -94,12 +107,12 @@ homeBtn.addEventListener("click", () => {
 
 langToggle.addEventListener('change', (e) =>{
     if (e.target.checked){
-        language = 'sp'
+        selectedLanguage = 'sp'
     } else {
-        language = 'en'
+        selectedLanguage = 'en'
     }
-    console.log(language)
-//how to get it to change automatically 
+
+    translation(selectedLanguage, currentPage.innerText-1)
 })
 
 //function to generate book and book page html elements
@@ -107,17 +120,24 @@ function generatePages(bookData) {
     const bookWrapper = document.createElement("div");
     bookWrapper.className = "flip-book closed";
     bookWrapper.id = bookData.id;
+    let pageId = -1
 
     bookWrapper.innerHTML = ` ${bookData.pages.map( page => ` 
                     <div class=" page page-content">
-                        <img id="${page.imgId}" src="${page.imgSrc}" alt="${page.imgAlt}" ></img>
+                        <img 
+                            id="${pageId+=1}" 
+                            data-src="${page.imgSrc}" 
+                            alt="${page.imgAlt}" 
+                            data-en="${page.language?.en}"
+                            data-sp="${page.language?.sp}" 
+                        ></img>
                     </div>
                     `)
                 .join("")}`;
 
     bookContainer.appendChild(bookWrapper);
+
 }
-   
 //function to instantiate each PageFlip object
 function createBook(bookData) {
     const element = document.getElementById(bookData.id);
@@ -129,7 +149,6 @@ function createBook(bookData) {
 
     return pageFlip;
 }
-
 //function to open book and set which book is active
 function setOpenActiveBook(bookData) {
     bookData.classList.remove('closed');
@@ -154,9 +173,9 @@ function closeBook(bookData) {
     bookData.classList.add('closed');
     overlay.classList.add('hidden')
     activeBook = null;
-    footer.innerHTML = null
+    leftPage.textContent = null;
+    rightPage.textContent = null;
 }
-
 //function to hide controlls (prev next button close book etc)
 function hideControls(){
     homeBtn.classList.remove('bring-to-front')
@@ -166,9 +185,36 @@ function hideControls(){
     prevBtn.classList.add('hidden')
     nextBtn.classList.add('hidden')
 }
+//translation for translation
+function translation(selLang, pageId = 0) {
 
-//translation for transcription
-function transcription(lang, bookData, pageIndex = 0) {
-    let pagesArray = books.find(x => x.id === bookData.id).pages;
-    return pagesArray[pageIndex].language[`${lang}`]
+    // 1. Select both elements
+    const sourceLeft = document.getElementById(pageId-1);
+    const sourceRight = document.getElementById(pageId);
+
+    // 2. Read the property using .dataset (converts data-username to username)
+    dataLeft = sourceLeft?.dataset[selLang];
+    dataRight = sourceRight?.dataset[selLang];
+
+    // 3. Inject it into the target element
+    leftPage.textContent = dataLeft;
+    rightPage.textContent = dataRight;
+}
+
+
+function preloadPages(bookID, currentPage = 0, load = 6) {
+    let bookElement = document.getElementById(bookID)
+    let pages = bookElement.querySelectorAll('.page')
+
+
+   for (let i = currentPage; i <= currentPage + load; i++) {
+    
+        const img = pages[i]?.querySelector(`img[data-src]`);
+        console.log(img)
+        
+        if (img && !img.src) {
+             img.src = img.dataset.src;
+        }
+    
+   }
 }
